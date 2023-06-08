@@ -20,10 +20,11 @@ class MobileMenu extends Component {
                 </div>
             </a>
             <ul role="menu" aria-labelledby="menu-btn" className={showMobileMenu ? "active" : "inactive"}>
-                <li><Link onClick={() => setMobileMenu(!showMobileMenu)} tabIndex="1" to="about-me" spy={true} smooth={true} offset={-50} duration={500} activeclassname="active" role="menuitem">About Me</Link></li>
-                <li><Link onClick={() => setMobileMenu(!showMobileMenu)} tabIndex="1" to="work" spy={true} smooth={true} offset={-50} duration={500} activeclassname="active" role="menuitem">Examples</Link></li>
-                <li><Link onClick={() => setMobileMenu(!showMobileMenu)} tabIndex="1" to="contact" spy={true} smooth={true} offset={-50} duration={500} activeclassname="active" role="menuitem">Contact Me</Link></li>
-                <li><Link onClick={() => setMobileMenu(!showMobileMenu)} tabIndex="1" to="resume" spy={true} smooth={true} offset={-50} duration={500} activeclassname="active" role="menuitem">Resume</Link></li>
+                <li><a href="/" onClick={() => setMobileMenu(!showMobileMenu)}>Home</a></li>
+                <li><a href="/about" onClick={() => setMobileMenu(!showMobileMenu)}>About Me</a></li>
+                <li><a href="/work" onClick={() => setMobileMenu(!showMobileMenu)}>Work</a></li>
+                <li><a href="/contact" onClick={() => setMobileMenu(!showMobileMenu)}>Contact</a></li>
+                <li><a href="/resume" onClick={() => setMobileMenu(!showMobileMenu)}>Resume</a></li>
             </ul>
         </nav>
     );

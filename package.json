@@ -35,7 +35,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0",
-    "react-scroll": "^1.8.9"
+    "gh-pages": "^5.0.0"
   }
 }

@@ -1,11 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
+import Home from "./Home";
 import AboutMe from "./AboutMe";
 import Contact from "./Contact";
 import Resume from "./Resume";
 import Work from "./Work";
 import MobileMenu from "../components/MobileMenu";
 import DesktopMenu from "../components/DesktopMenu";
-import selfImg from "../assets/images/erin.jpeg";
+
+import {
+    Route,
+    Routes
+  } from "react-router-dom";
  
 function Main () {
     // initialize hooks/variables
@@ -48,24 +53,13 @@ function Main () {
             </header>
             {/* main content */}
             <main className="content" id="main">
-                <div className="hero">
-                    <h1 className="header-title">Hi, I'm <span className="emphasis">Erin Keller</span>.</h1>
-                    <div className="img-container">
-                        <img src={selfImg} alt="A photo of Erin Keller" />
-                    </div>
-                </div>
-                <section name="about-me">
-                    <AboutMe />
-                </section>
-                <section name="work">
-                    <Work />
-                </section>
-                <section name="contact">
-                    <Contact />
-                </section>
-                <section name="resume">
-                    <Resume />
-                </section>
+                <Routes>
+                    <Route path="*" element={<Home />} />
+                    <Route exact path="/about" element={<AboutMe />} />
+                    <Route exact path="/work" element={<Work />} />
+                    <Route exact path="/contact" element={<Contact />} />
+                    <Route exact path="/resume" element={<Resume />} />
+                </Routes>
             </main>
             {/* footer */}
             <footer className="footer">
