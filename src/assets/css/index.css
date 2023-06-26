@@ -526,12 +526,6 @@ p {
     font-size: 2.625rem;
     padding-left: 0.5rem;
 }
-.dark .content-section .main-content .container {
-    box-shadow: inset 0 10px 9px -10px rgba(0,0,0,0.4);
-}
-.light .content-section .main-content .container {
-    box-shadow: inset 0 10px 9px -10px rgba(0,0,0,0.4);
-}
 
 /************************************************
    ABOUT ME                              @aboutMe
@@ -681,6 +675,22 @@ p {
     padding-bottom: 0.5rem;
     line-height: 1.5;
 }
+.dark .content-txt .card-btn {
+    color: #191919;
+    background-color: #FFEB3B;
+}
+.dark .content-txt .card-btn:hover {
+    color: #191919;
+    background-color: #f4e770;
+}
+.light .content-txt .card-btn {
+    color: #FFF;
+    background-color: #9C27B0;
+}
+.light .content-txt .card-btn:hover {
+    color: #FFF;
+    background-color: #c36ad2;
+}
 .content-txt .card-btn {
     font-family: var(--font-main-style);
     display: inline-block;
@@ -688,11 +698,9 @@ p {
     -webkit-border-radius: 5px; 
     -moz-border-radius: 5px;
     border-radius: 5px;
-    color: lightgray;
     font-weight: normal;
     font-size: 1rem;
     margin: 0.5rem 0.1rem;
-    background-color: #191919;
     border: none;
     cursor: pointer;
 }
@@ -701,13 +709,13 @@ p {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        justify-content: center;
+        justify-content: start;
         width: 100%;
         margin: 1rem auto;
         gap: 17px;
     }
     .card-list article:nth-child(1) {
-        flex: 0 0 40%;
+        flex: 0 0 30%;
     }
     .card-list article {
         margin-bottom: 0;
@@ -812,11 +820,16 @@ form .contact-btn:hover {
 form .contact-btn:hover {
   background-color: var(--bg-color-five);
 }
+.dark .thanks {
+    color: #FFF;
+}
+.light .thanks {
+    color: #191919;
+}
 .thanks {
     text-align: center;
     font-size: 5rem;
     margin-top: 3rem;
-    color: #FFF;
     font-weight: 1000;
     font-family: var(--font-main-style);
 }
@@ -836,10 +849,16 @@ form .contact-btn:hover {
 .content-section .main-content .resume {
     padding: 1rem;
 }
+.dark .resume-form { 
+    border: 1px solid #000;
+}
+.light .resume-form { 
+    border: 1px solid #dfdfdf;
+}
 .resume-form { 
     width: 90%;
     margin: 1rem auto;
-    border: 1px solid #191919;
+    border: 1px solid #dfdfdf;
     background-color: #FFF;
 }
 @media screen and (min-width: 800px) {

@@ -20,6 +20,9 @@ import noteTakerScreenshot from "../assets/images/note-taker-screenshot.png";
 import empTrackerScreenshot from "../assets/images/employee-tracker-screenshot.png";
 import techBlogScreenshot from "../assets/images/techBlog.png";
 import metaInsightScreenshot from "../assets/images/meta-insight.png";
+import pwaScreenshot from "../assets/images/pwa-screenshot.png";
+import socialScreenshot from "../assets/images/social-api.png";
+import ecommerceScreenshot from "../assets/images/ecommerce-screenshot.png";
 
 class Work extends Component {
   render() {
@@ -61,6 +64,12 @@ class Work extends Component {
                         </div>
                         <h1 className="header-title">Personal <span className="emphasis">web projects</span>.</h1>
                         <div className="card-list" style={{marginBottom:"2em"}}>
+                        <Card cardUrl="https://keller-text-editor-c96daa18d32b.herokuapp.com/"
+                              btnUrl="https://github.com/erin-m-keller/keller-text-editor"
+                              src={pwaScreenshot}
+                              alt="PWA Text Editor"
+                              title="PWA Text Editor"
+                              tags={["#javascript","#css","#nodeJS","#expressJS","#pwa"]} />
                         <Card cardUrl="https://keller-tech-blog.herokuapp.com/"
                               btnUrl="https://github.com/erin-m-keller/keller-tech-blog"
                               src={techBlogScreenshot}
@@ -143,11 +152,23 @@ class Work extends Component {
                         <h1 className="header-title">Terminal <span className="emphasis">applications</span>.</h1>
                         <div className="card-list" style={{marginBottom:"2em"}}>
                         <NodeCard cardUrl="javascript:void(0)"
+                              btnUrl="https://github.com/erin-m-keller/keller-social-network"
+                              src={ecommerceScreenshot}
+                              alt="Screenshot of Ecommerce API"
+                              title="Ecommerce API"
+                              tags={["#javascript","#nodeJS","#expressJS","#sequelize","#mysql"]} />
+                        <NodeCard cardUrl="javascript:void(0)"
+                              btnUrl="https://github.com/erin-m-keller/keller-social-network"
+                              src={socialScreenshot}
+                              alt="Screenshot of Social Network API"
+                              title="Social Network API"
+                              tags={["#javascript","#nodeJS","#expressJS","#mongoDB","#mongoose","#momentJS"]} />
+                        <NodeCard cardUrl="javascript:void(0)"
                               btnUrl="https://github.com/erin-m-keller/keller-employee-tracker"
                               src={empTrackerScreenshot}
                               alt="Screenshot of Employee Database Manager"
                               title="Employee Database Manager"
-                              tags={["#javascript","#nodeJS","mysql"]} />
+                              tags={["#javascript","#nodeJS","#mysql"]} />
                         <NodeCard cardUrl="javascript:void(0)"
                               btnUrl="https://github.com/erin-m-keller/keller-svg-maker"
                               src={svgMakeScreenshot}
