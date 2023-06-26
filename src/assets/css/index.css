@@ -23,20 +23,24 @@
 ************************************************/
 :root {
     --bg-color-one: #dcd6f7;
-    --bg-color-two: #a6b1e1;
-    --bg-color-three: #b4869f;
-    --bg-color-four: #B68B97;
     --bg-color-four-dark: #61303e;
-    --bg-color-five: #4e4c67;
     --bg-color-five-dark: #2b293f;
-    --bg-color-six: #def2c8;
     --bg-color-six-dark: #98ae80;
     --font-main-style: "Roboto Slab", serif;
     --font-sub-style: "Dosis", sans-serif;
     --font-timer-style: "Secular One", sans-serif;
     --font-aboutme-style: "Merienda", sans-serif;
 
+    --darkbg-color: #2d2d2d;
+    --darkbg-highlight-color: #003F5C;
+    --dark-text: #FB7979;
 
+    --lightbg-color: #FCF9EC;
+    --lightbg-highlight-color: #B0F4E6;
+    --light-text: #191919;
+
+    --timer-three: #b4869f;
+    --timer-five: #4e4c67;
 
     --border: 3px;
     --color1: #6be89b;
@@ -66,6 +70,12 @@ a {
 p {
     font-size: 1rem;
 }
+.light {
+    background-color: var(--lightbg-color);
+}
+.dark {
+    background-color: var(--darkbg-color);
+}
 .clear { 
     clear: both; 
 }
@@ -79,6 +89,7 @@ p {
 }
 .back-drop {
     opacity: 0;
+    display: none;
     background-color: transparent;
     height: 100%;
     width: 100%;
@@ -86,6 +97,7 @@ p {
 }
 .back-drop.closed {
     opacity: 0;  
+    display: none;
     -webkit-animation: fadeOut 0.5s ease-out 0s 0.7 normal backwards;  
     -moz-animation: fadeOut 0.5s ease-out 0s 0.7 normal backwards;
     animation: fadeOut 0.5s ease-out 0s 0.7 normal backwards;
@@ -114,6 +126,15 @@ p {
 .white {
     color: #FFF;
 }
+@keyframes movingBackground {
+    0%    { background-position: 0% center; }
+    16.66%   { background-position: 20% center; }
+    33.33%   { background-position: 40% center; }
+    50%   { background-position: 60% center; }
+    66.66%   { background-position: 80% center; }
+    83.33%   { background-position: 100% center; }
+    100%  { background-position: 120% center; }
+}
 
 /************************************************
    HEADER                                @header
@@ -123,13 +144,18 @@ p {
    horizontal menu (desktop and mobile)
 ************************************************/
 .header {
-    background-color: var(--bg-color-three);
     color: #ffffff;
     width: 100%;
     height: 3rem;
     position: fixed;
     top: 0;
     z-index: 999999;
+}
+.dark .header-title {
+    color: var(--dark-text);
+}
+.light .header-title {
+    color: var(--light-text);
 }
 .header-title {
     font-family: var(--font-main-style);
@@ -150,6 +176,12 @@ p {
 .header nav.desktop-menu {
     display: none;
 }
+.dark .header nav.mobile-menu {
+    background-color: var(--darkbg-highlight-color);
+}
+.light .header nav.mobile-menu {
+    background-color: var(--lightbg-highlight-color);
+}
 .header nav.mobile-menu {
     display: block;
     margin-right: 20px;
@@ -158,8 +190,12 @@ p {
     width: 100%;
     font-size: 1.25rem;
     padding: 0.5rem;
-    background-color: var(--bg-color-one);
-    border-bottom: 1px solid #FFF;
+}
+.dark .header nav.mobile-menu ul {
+    background-color: var(--darkbg-highlight-color);
+}
+.light .header nav.mobile-menu ul {
+    background-color: var(--lightbg-highlight-color);
 }
 .header nav.mobile-menu ul {
     list-style-type: none;
@@ -174,7 +210,7 @@ p {
     height: 0px;
 }
 .header nav.mobile-menu ul.active {
-    height: 16rem;
+    height: auto;
     transition: height .3s ease;
     padding: 1rem;
 }
@@ -188,7 +224,16 @@ p {
     margin-left: 25px;
     padding: 0.25rem;
 }
-.header nav ul li a {
+.dark .header nav ul li a,
+.dark .header nav ul li span {
+    color: #FFF;
+}
+.light .header nav ul li a,
+.light .header nav ul li span {
+    color: #191919;
+}
+.header nav ul li a,
+.header nav ul li span {
     font-family: var(--font-sub-style);
     display: inline-block;
     text-decoration: none;
@@ -199,38 +244,83 @@ p {
     padding: 0.5rem;
     cursor: pointer;
 }
-.header nav.mobile-menu ul li a {
+.header nav.mobile-menu ul li a,
+.header nav.mobile-menu ul li span {
     color: transparent;
     background-color: transparent;
     transition: color 3s ease, background-color 3s ease;
 }
-.header nav ul li a.active {
-    color: var(--bg-color-five);
+.dark .header nav ul li a.active,
+.dark .header nav ul li span.active {
+    color: #FFF;
+    font-weight: bold;
 }
-.header nav ul li a.active::after {
+.light .header nav ul li a.active,
+.light .header nav ul li span.active {
+    color: #191919;
+    font-weight: bold;
+}
+.dark .header nav ul li a.active::after,
+.dark .header nav ul li span.active::after {
+    background-color: #FFF;
+}
+.light .header nav ul li a.active::after,
+.light .header nav ul li span.active::after {
+    background-color: #191919;
+}
+.header nav ul li a.active::after,
+.header nav ul li span.active::after {
     position: absolute;
     height: 2px;
-    background-color: var(--bg-color-five);
     width: 100%;
     left: 50%;
     bottom: 0;
 }
-.header nav.mobile-menu ul.active li a {
+.dark .header nav.mobile-menu ul.active li a,
+.dark .header nav.mobile-menu ul.active li span {
+    color: #FFF;
+}
+.light .header nav.mobile-menu ul.active li a,
+.light .header nav.mobile-menu ul.active li span {
     color: #191919;
 }
-.header nav.mobile-menu ul.active li a:hover {
-    color: var(--bg-color-five);
-}
-.header nav.mobile-menu ul.inactive li a {
+.header nav.mobile-menu ul.inactive li a,
+.header nav.mobile-menu ul.inactive li span {
     color: transparent;
+}
+.dark .menu-bar {
+    background-color: #FFF;
+}
+.light .menu-bar {
+    background-color: #191919;
 }
 .menu-bar {
     width: 35px;
     height: 5px;
-    background-color: var(--bg-color-five);
     margin: 6px 0;
     transition: all 0.5s;
     transform-origin: right;
+}
+.dark .toggle-theme {
+    color: #FFF;
+}
+.light .toggle-theme {
+    color: #191919;
+}
+.toggle-theme {
+    float: right;
+    padding: 0.2em;
+}
+.toggle-theme:hover {
+    cursor: pointer;
+}
+.toggle-theme-mobile {
+    color: #191919;
+    font-family: var(--font-sub-style);
+    font-size: 0.95em;
+}
+.toggle-theme-mobile:hover {
+    cursor: pointer;
 }
 #menu-btn {
     position: absolute;
@@ -276,13 +366,18 @@ p {
     .header nav.mobile-menu {
         display: none;
     }
+    .dark .header nav.desktop-menu {
+        background-color: var(--darkbg-highlight-color);
+    }
+    .light .header nav.desktop-menu {
+        background-color: var(--lightbg-highlight-color);
+    }
     .header nav.desktop-menu {
         height: 100%;
         margin-right: 20px;
         width: 100%;
         font-size: 1.25rem;
         background-color: var(--bg-color-one);
-        border-bottom: 1px solid #191919;
     }
     .header nav.desktop-menu ul li {
         display: inline-block;
@@ -299,20 +394,17 @@ p {
     content: "";
     position: absolute;
     height: 2px;
-    background-color: var(--bg-color-five);
     width: 0;
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
     transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
 }
-@media screen and (min-width: 600px) {
-    .header nav ul li a::after {
-        background-color: var(--bg-color-five);
-    }
+.dark .header nav ul li a:hover {
+    color: #FFF;
 }
-.header nav ul li a:hover {
-    color: var(--bg-color-five);
+.light .header nav ul li a:hover {
+    color: #191919;
 }
 .header nav ul li a:hover::after {
     width: 100%;
@@ -321,23 +413,29 @@ p {
     padding: 1rem;
     height:115vh;
     width:100vw;
-    background-color: var(--bg-color-two);
 }
-.hero .img-container {
+.self .img-container {
     position: relative;
     padding: 1em;
     text-align: center;
 }
-.hero .img-container img {
+.self .img-container img {
     width: 75%;
-    max-width: 500px;
+    max-width: 20em;
     border-radius: 50%;
+    margin-bottom: 1em;
 }
-.hero .emphasis {
+.emphasis {
     padding: 30px 0 8px;
     position: relative;
 }
-.hero .emphasis::before {
+.dark .emphasis::before {
+    background: #FB5B5A;
+}
+.light .emphasis::before {
+    background: #67EACA;
+}
+.emphasis::before {
     content: "";
     position: absolute;
     left: 2%;
@@ -378,6 +476,12 @@ p {
     display: flex;
     flex-wrap: wrap;
 }
+.dark .content-section .tag {
+    background-color: var(--dark-text);
+}
+.light .content-section .tag {
+    background-color: #FFF;
+}
 .content-section .tag {
     font-family: var(--font-main-style);
     display: inline-block;
@@ -388,7 +492,6 @@ p {
     color: #191919;
     font-weight: 600;
     margin: 0.1rem;
-    background-color: var(--bg-color-four);
 }
 .content-section .tag-sm {
     font-size: .75rem;
@@ -423,17 +526,11 @@ p {
     font-size: 2.625rem;
     padding-left: 0.5rem;
 }
-.content-section.one {
-    background-color: var(--bg-color-three);
+.dark .content-section .main-content div:first-child {
+    box-shadow: inset 0 10px 9px -10px rgba(0,0,0,0.4);
 }
-.content-section.two {
-    background-color: var(--bg-color-four);
-}
-.content-section.three {
-    background-color: var(--bg-color-five);
-}
-.content-section.four {
-    background-color: var(--bg-color-six);
+.light .content-section .main-content div:first-child {
+    box-shadow: inset 0 10px 9px -10px rgba(0,0,0,0.4);
 }
 
 /************************************************
@@ -446,48 +543,39 @@ p {
     margin-bottom: 1rem;
     color: #FFF;
 }
+.dark .about-me .timer {
+    background-color: var(--dark-text);
+}
+.light .about-me .timer {
+    background-color: var(--lightbg-highlight-color);
+}
 .about-me .timer {
     font-family: var(--font-timer-style);    
     padding: 2rem;
-    background-color: rgba(0,0,0,0.75);
 }
 .about-me .timer p {
     font-size: 38px;
     text-align: center;
     margin-bottom: 2rem;
-    color: #FFF;
-    -webkit-text-stroke: 1px #000; 
+    color: #191919;
 }
-/************************************************
-   The following animation was 
-   modified from: 
-   https://codepen.io/alvarotrigo/pen/PoKMyNO
-   (@alvarotrigo) 
-*************************************************/
-@keyframes movingBackground {
-    0%   { background-position: 0% center; }
-    25%  { background-position: 50% center; }
-    50%  { background-position: 100% center; }
-    75%  { background-position: 150% center; }
-    100% { background-position: 200% center; }
-  }
+.dark .about-me .timer span {
+    background-image: linear-gradient(90deg, #af2f2f 0%, #bb4d4d 33%, #333 67%, #191919 100%);
+}
+.light .about-me .timer span {
+    background-image: linear-gradient(90deg, #0f9d9a 0%, #12D3CF 33%, #333 67%, #191919 100%);
+}
 .about-me .timer span {
     text-transform: uppercase;
-    background-image: linear-gradient(90deg, var(--bg-color-one) 0%, var(--bg-color-three) 50%, var(--bg-color-five) 100%);
-    background-size: auto auto;
-    background-clip: border-box;
-    background-size: 200% auto;
+    background-size: 800% auto;
     color: #fff;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: movingBackground 3s linear infinite;
+    animation: movingBackground 6s linear infinite;
     display: inline-block;
     font-size: 32px;
 }
-/*************************
-    end animation css 
-*************************/
 .about-me .timer .flex-columns {
     display: flex;
     flex-direction: row;
@@ -503,16 +591,17 @@ p {
         flex: 25%;
     }
 }
+.dark .aboutme-section {
+    color: var(--dark-text);
+}
+.light .aboutme-section {
+    color: #191919;
+}
 .aboutme-section {
     width: 90%;
     height: 80%;
     padding: 3rem;
     margin: 4rem auto;
-    border: 1px solid var(--bg-color-five-dark);
-    -moz-box-shadow: var(--bg-color-five-dark) 0px 4px 12px; 
-    -webkit-box-shadow: var(--bg-color-five-dark) 0px 4px 12px; 
-    box-shadow: var(--bg-color-five-dark) 0px 4px 12px;
-    background-color: #FFF;
 }
 @media screen and (min-width: 800px) {
     .aboutme-section {
@@ -525,18 +614,21 @@ p {
     font-size: 22px;
     line-height: 45px;
 }
+.dark .aboutme-section strong {
+    background: #fc7979;
+    color: #191919;
+}
+.light .aboutme-section strong {
+    background: var(--lightbg-highlight-color);
+    color: #191919;
+}
 .aboutme-section strong {
     font-family: var(--font-main-style);
     font-weight: 600;
     font-size: 22px;
     line-height: 45px;
     display: inline;
-    padding: 0.25em 0;
-    background: #000;
-    color: #ffffff;
-    -moz-box-shadow: 0.15em 0 0 #000, -0.15em 0 0 #000; 
-    -webkit-box-shadow: 0.15em 0 0 #000, -0.15em 0 0 #000; 
-    box-shadow: 0.15em 0 0 #000, -0.15em 0 0 #000;
+    padding: 0.25em;
 }
 
 /************************************************
@@ -547,10 +639,18 @@ p {
 .content-section .main-content .work {
     padding: 1rem;
 }
+.dark .card-list article {
+    background-color: #000;
+    color: #FFF;
+    border: 5px solid #000;
+}
+.light .card-list article {
+    background-color: var(--lightbg-highlight-color);
+    color: #191919;
+    border: 5px solid var(--lightbg-highlight-color);
+}
 .card-list article {
     margin-bottom: 1rem;
-    border: 5px solid var(--bg-color-four-dark);
-    background-color: var(--bg-color-four-dark);
 }
 .card-list article a {
     position: relative;
@@ -568,11 +668,18 @@ p {
     font-family: var(--font-main-style);
     font-weight: normal;
 }
+.dark .content-txt p,
+.dark .content-txt h3 {
+    color: #FFF;
+}
+.light .content-txt p,
+.light .content-txt h3 {
+    color: #191919;
+}
 .content-txt p,
 .content-txt h3 {
     padding-bottom: 0.5rem;
     line-height: 1.5;
-    color: #FFF;
 }
 .content-txt .card-btn {
     font-family: var(--font-main-style);
@@ -616,16 +723,19 @@ p {
 .content-section .main-content .contact-me {
     padding: 1rem;
 }
+.dark .contact-form {
+    background-color: var(--darkbg-color);
+    color: var(--dark-text);
+}
+.light .contact-form {
+    background-color: #FFF;
+    color: #191919;
+}
 .contact-form {
     width: 90%;
     height: 80%;
     padding: 1rem;
     margin: 1rem auto;
-    border: 1px solid var(--bg-color-five-dark);
-    -moz-box-shadow: var(--bg-color-five-dark) 0px 4px 12px; 
-    -webkit-box-shadow: var(--bg-color-five-dark) 0px 4px 12px; 
-    box-shadow: var(--bg-color-five-dark) 0px 4px 12px;
-    background-color: #FFF;
 }
 @media screen and (min-width: 800px) {
     .contact-form {
@@ -664,12 +774,19 @@ p {
 form .contact-btn {
     display: inline-block;
 }
+.dark form .contact-btn {
+    background-color: var(--dark-text);
+    border: 1px solid var(--dark-text);
+    color: #191919;
+}
+.light form .contact-btn {
+    background-color: var(--lightbg-highlight-color);
+    border: 1px solid var(--lightbg-highlight-color);
+    color: #191919;
+}
 form .contact-btn {
-    background-color: var(--bg-color-five-dark);
-    border: 1px solid #FFF;
     border-radius: 16px;
     box-sizing: border-box;
-    color: #FFF;
     cursor: pointer;
     font-size: 1.125rem;
     padding: 5px;
@@ -708,10 +825,7 @@ form .contact-btn:hover {
 .resume-form { 
     width: 90%;
     margin: 1rem auto;
-    border: 1px solid var(--bg-color-six-dark);
-    -moz-box-shadow: var(--bg-color-six-dark) 0px 4px 12px;
-    -webkit-box-shadow: var(--bg-color-six-dark) 0px 4px 12px;
-    box-shadow: var(--bg-color-six-dark) 0px 4px 12px;
+    border: 1px solid #191919;
     background-color: #FFF;
 }
 @media screen and (min-width: 800px) {
@@ -861,12 +975,19 @@ form .contact-btn:hover {
 form .resume-btn {
     display: inline-block;
 }
+.dark form .resume-btn {
+    background-color: var(--dark-text);
+    border: 1px solid var(--dark-text);
+    color: #191919;
+}
+.light form .resume-btn {
+    background-color: var(--lightbg-highlight-color);
+    border: 1px solid var(--lightbg-highlight-color);
+    color: #191919;
+}
 form .resume-btn {
-    background-color: var(--bg-color-six-dark);
-    border: 1px solid #FFF;
     border-radius: 16px;
     box-sizing: border-box;
-    color: #000000;
     cursor: pointer;
     font-size: 1.125rem;
     padding: 5px;
@@ -877,9 +998,6 @@ form .resume-btn {
 form .resume-btn:active,
 form .resume-btn:hover {
   outline: 0;
-}
-form .resume-btn:hover {
-  background-color: var(--bg-color-six);
 }
 .resume-list li {
     font-family: var(--font-main-style);
@@ -901,13 +1019,24 @@ form .resume-btn:hover {
 
    The styles for the footer
 ************************************************/
+.dark .footer {
+    background-color: var(--darkbg-highlight-color);
+}
+.light .footer {
+    background-color: var(--lightbg-highlight-color);
+}
 .footer {
     text-align: center;
     height: 3rem;
     width: 100%;
-    background-color: var(--bg-color-one);
     display: table;
     padding: 0.5rem;
+}
+.dark .footer h4 {
+    color: #FFF;
+}
+.light .footer h4 {
+    color: #191919;
 }
 .footer h4 {
     font-family: var(--font-sub-style);

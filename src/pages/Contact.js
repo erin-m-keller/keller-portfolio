@@ -49,7 +49,7 @@ class Contact extends Component {
       >
         <div className="main-content">
           <motion.div variants={childAnimation} transition={{ duration: 0.5 }} className="contact-me">
-            <h2 className="white">Contact me</h2>
+            <h1 className="header-title">Contact <span className="emphasis">me</span>.</h1>
             <ContactForm />
           </motion.div>
         </div>

@@ -1,5 +1,6 @@
 import React, { Component, useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import selfImg from "../assets/images/erin.jpeg";
 
 // @ExperienceTimer function is modified from the code found on 
 // this blog post by Julia: https://dev.to/yuridevat/how-to-create-a-timer-with-react-7b9 
@@ -69,7 +70,12 @@ class AboutMe extends Component {
       >
         <div className="main-content">
           <motion.div variants={childAnimation} transition={{ duration: 0.5 }} className="about-me">
-            <h2>About me</h2>
+            <h1 className="header-title">About <span className="emphasis">me</span>.</h1>
+            <div className="self">
+              <div className="img-container">
+                <img src={selfImg} alt="A photo of Erin Keller" />
+              </div>
+            </div>
             <ExperienceTimer />
             <div className="aboutme-section">
               <p>Erin Keller loves programming, solving problems, working in a team, and continuously learning new things. She's been <strong>developing Front End applications</strong> for over <strong>12 years</strong>. For the past decade she has been working for the Fortune 500 company <strong>IBM</strong>.</p>

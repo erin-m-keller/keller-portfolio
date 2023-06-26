@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import Home from "./Home";
 import AboutMe from "./AboutMe";
 import Contact from "./Contact";
 import Resume from "./Resume";
@@ -18,6 +17,10 @@ function Main () {
     // initialize hooks/variables
     const [showMobileMenu, setMobileMenu] = useState(null),
           [isMobile, setIsMobile] = useState(false),
+          [theme, setTheme] = useState(() => {
+            const savedTheme = localStorage.getItem('portfolioTheme');
+            return savedTheme || 'light';
+          }),
           windowSize = useRef([window.innerWidth, window.innerHeight]),
           location = useLocation();
 
@@ -26,6 +29,16 @@ function Main () {
         setMobileMenu(false)
         setIsMobile(false)
     }
+
+    const toggleTheme = (selectedTheme) => {
+        if (selectedTheme === 'light') {
+            setTheme('light');
+            localStorage.setItem('portfolioTheme','light');
+        } else {
+            setTheme('dark');
+            localStorage.setItem('portfolioTheme','dark');
+        }
+    };
 
     // runs on page load
     useEffect(() => {
@@ -44,7 +57,7 @@ function Main () {
     }, [isMobile,showMobileMenu]);
 
     return (
-        <React.Fragment>
+        <div className={`${theme}`}>
             {/* show backdrop when mobile menu is open */}
             {showMobileMenu != null && isMobile ? 
                 <div className={showMobileMenu ? 'back-drop active' : 'back-drop closed'}></div>
@@ -54,15 +67,14 @@ function Main () {
             {/* main header */}
             <header className="header">
                 <a className="skip-link" href="#main" tabIndex="1">Skip Navigation Links</a>
-                <DesktopMenu />
-                <MobileMenu setMobileMenu={setMobileMenu} showMobileMenu={showMobileMenu} />
+                <DesktopMenu toggleTheme={toggleTheme} />
+                <MobileMenu setMobileMenu={setMobileMenu} toggleTheme={toggleTheme} showMobileMenu={showMobileMenu} />
             </header>
             {/* main content */}
             <main className="content" id="main">
             <AnimatePresence mode="wait" initial={false}>
                 <Routes location={location}>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<AboutMe />} />
+                    <Route path="/" element={<AboutMe />} />
                     <Route path="/work" element={<Work />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/resume" element={<Resume />} />
@@ -75,7 +87,7 @@ function Main () {
                     <h4>&copy; 2023 Erin Keller</h4>
                 </div>
             </footer>
-        </React.Fragment>
+        </div>
     );
 }
  

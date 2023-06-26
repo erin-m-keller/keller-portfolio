@@ -44,7 +44,7 @@ class Work extends Component {
       <section className="content-section two">
             <div className="main-content">
                   <motion.div variants={childAnimation} transition={{ duration: 0.5 }} className="work">
-                        <h2>Collaborations</h2>
+                        <h1 className="header-title">Collaborative <span className="emphasis">initiatives</span>.</h1>
                         <div className="card-list" style={{marginBottom:"2em"}}>
                               <Card cardUrl="https://meta-insight.herokuapp.com/"
                                     btnUrl="https://github.com/erin-m-keller/meta-insight"
@@ -59,7 +59,7 @@ class Work extends Component {
                                     title="Volunteer Finder"
                                     tags={["#html","#css","#bulma-css","#javascript","#firebase"]} />
                         </div>
-                        <h2>Personal Web Projects</h2>
+                        <h1 className="header-title">Personal <span className="emphasis">web projects</span>.</h1>
                         <div className="card-list" style={{marginBottom:"2em"}}>
                         <Card cardUrl="https://keller-tech-blog.herokuapp.com/"
                               btnUrl="https://github.com/erin-m-keller/keller-tech-blog"
@@ -140,7 +140,7 @@ class Work extends Component {
                               title="LastFM Music Artist Search Engine"
                               tags={["#html","#css","#bulma-css","#javascript","#react","#lastfm api"]} />
                         </div>
-                        <h2>Node.js Applications</h2>
+                        <h1 className="header-title">Terminal <span className="emphasis">applications</span>.</h1>
                         <div className="card-list" style={{marginBottom:"2em"}}>
                         <NodeCard cardUrl="javascript:void(0)"
                               btnUrl="https://github.com/erin-m-keller/keller-employee-tracker"
