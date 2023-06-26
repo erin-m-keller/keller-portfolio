@@ -161,7 +161,7 @@ p {
     font-family: var(--font-main-style);
     font-weight: normal;
     display: inline-block;
-    font-size: 1.813rem;
+    font-size: 3em;
     color: #000;
     margin: 1em auto;
     width: 100%;
@@ -359,7 +359,7 @@ p {
     transform: rotate(45deg);
     top: 1.55rem;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 770px) {
     .header nav.desktop-menu {
         display: block;
     }
@@ -748,7 +748,8 @@ p {
     display: block;
     padding-bottom: 1rem;
 }
-.contact-form input {
+.contact-form input,
+.contact-form textarea {
     font-family: var(--font-main-style);
     font-weight: 100;
 }
@@ -761,6 +762,8 @@ p {
     border-top: none;
     height: 3rem;
     margin-bottom: 4rem;
+    padding: 1em;
+    font-size: 1.25em;
 }
 .contact-form textarea#message {
     width: 100%;
@@ -770,6 +773,8 @@ p {
     border-right: 1px dotted var(--bg-color-five-dark);
     border-top: 1px dotted var(--bg-color-five-dark);
     margin-bottom: 4rem;
+    padding: 1em;
+    font-size: 1.25em;
 }
 form .contact-btn {
     display: inline-block;
@@ -779,10 +784,16 @@ form .contact-btn {
     border: 1px solid var(--dark-text);
     color: #191919;
 }
+.dark form .contact-btn:hover {
+    background-color: #f59595;
+}
 .light form .contact-btn {
     background-color: var(--lightbg-highlight-color);
     border: 1px solid var(--lightbg-highlight-color);
     color: #191919;
+}
+.light form .contact-btn:hover {
+    background-color: #71e1ca;
 }
 form .contact-btn {
     border-radius: 16px;
@@ -805,6 +816,9 @@ form .contact-btn:hover {
     text-align: center;
     font-size: 5rem;
     margin-top: 3rem;
+    color: #FFF;
+    font-weight: 1000;
+    font-family: var(--font-main-style);
 }
 @media screen and (min-width:600px) {
     .contact-form {

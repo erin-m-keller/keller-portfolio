@@ -8,7 +8,7 @@ function ContactForm() {
   const [state, handleSubmit] = useForm("xbjedlkn");
   // return message when email successfully sent
   if (state.succeeded) {
-      return <p className="thanks">Thanks for connecting with me!</p>;
+      return <h1 className="thanks">Thanks for connecting with <span className="emphasis">me!</span>.</h1>;
   }
   return (
     <div className="contact-form">
