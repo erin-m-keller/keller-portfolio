@@ -6,22 +6,33 @@ import Resume from "./Resume";
 import Work from "./Work";
 import MobileMenu from "../components/MobileMenu";
 import DesktopMenu from "../components/DesktopMenu";
+import { AnimatePresence, motion } from "framer-motion";
 
 import {
     Route,
-    Routes
+    Routes,
+    useLocation
   } from "react-router-dom";
  
 function Main () {
     // initialize hooks/variables
-    const [showMobileMenu, setMobileMenu] = useState(null);
-    const [isMobile, setIsMobile] = useState(false);
-    const windowSize = useRef([window.innerWidth, window.innerHeight]);
+    const [showMobileMenu, setMobileMenu] = useState(null),
+          [isMobile, setIsMobile] = useState(false),
+          [isTransitioning, setIsTransitioning] = useState(false),
+          windowSize = useRef([window.innerWidth, window.innerHeight]),
+          location = useLocation(),
+          variants = {
+            initial: { opacity: 0 },
+            enter: { opacity: 1 },
+            exit: { opacity: 0 },
+          };
+
     // Close mobile menu when window is resized
     if (!isMobile && showMobileMenu) {
         setMobileMenu(false)
         setIsMobile(false)
     }
+
     // runs on page load
     useEffect(() => {
         // set isMobile true on page resize less than 600w
@@ -36,7 +47,13 @@ function Main () {
         if (windowSize.current[0] <= 600) {
             setIsMobile(true);
         }
-    }, [isMobile,showMobileMenu]);
+        setIsTransitioning(true);
+        const timeout = setTimeout(() => {
+          setIsTransitioning(false);
+        }, 300); 
+        return () => clearTimeout(timeout);
+    }, [isMobile,showMobileMenu],[location]);
+
     return (
         <React.Fragment>
             {/* show backdrop when mobile menu is open */}
@@ -53,21 +70,32 @@ function Main () {
             </header>
             {/* main content */}
             <main className="content" id="main">
-                <Routes>
-                    <Route path="*" element={<Home />} />
-                    <Route exact path="/about" element={<AboutMe />} />
-                    <Route exact path="/work" element={<Work />} />
-                    <Route exact path="/contact" element={<Contact />} />
-                    <Route exact path="/resume" element={<Resume />} />
-                </Routes>
+            <AnimatePresence mode="wait" initial={false}>
+                <motion.div
+                    key={location.pathname}
+                    initial="initial"
+                    animate="enter"
+                    exit="exit"
+                    variants={variants}
+                    transition={{ duration: 0.3 }}
+                >
+                    <Routes location={location}>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/about" element={<AboutMe />} />
+                        <Route path="/work" element={<Work />} />
+                        <Route path="/contact" element={<Contact />} />
+                        <Route path="/resume" element={<Resume />} />
+                    </Routes>
+
+                    {/* footer */}
+                    <footer className="footer">
+                        <div className="vertical-center">
+                            <h4>&copy; 2023 Erin Keller</h4>
+                        </div>
+                    </footer>
+                </motion.div>
+            </AnimatePresence>
             </main>
-            {/* footer */}
-            <footer className="footer">
-                <div className="vertical-center">
-                    <h4>&copy; 2023 Erin Keller</h4>
-                    <a href="https://www.vecteezy.com/free-png/forest">Forest PNGs by Vecteezy</a>
-                </div>
-            </footer>
         </React.Fragment>
     );
 }

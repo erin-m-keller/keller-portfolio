@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import profileImg from "../assets/images/erin.jpeg";
 import resume from "../assets/documents/erin-resume.pdf";
  
 class Resume extends Component {
   render() {
     return (
-      <div className="content-section four">
+      <section className="content-section four">
         <div className="main-content">
           <div className="resume">
             <h2>Resume</h2>
@@ -139,7 +138,7 @@ class Resume extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }

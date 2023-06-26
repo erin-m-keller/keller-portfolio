@@ -28,14 +28,14 @@ function ContactForm() {
 class Contact extends Component {
   render() {
     return (
-      <article className="content-section three">
+      <section className="content-section three">
         <div className="main-content">
           <div className="contact-me">
             <h2 className="white">Contact me</h2>
             <ContactForm />
           </div>
         </div>
-      </article>
+      </section>
     );
   }
 }

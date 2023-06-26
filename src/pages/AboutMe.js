@@ -48,18 +48,18 @@ function ExperienceTimer() {
 class AboutMe extends Component {
   render() {
     return (
-        <article className="content-section three">
-          <div className="main-content">
-            <div className="about-me">
-              <h2>About me</h2>
-              <ExperienceTimer />
-              <div className="aboutme-section">
-                <p>Erin Keller loves programming, solving problems, working in a team, and continuously learning new things. She's been <strong>developing Front End applications</strong> for over <strong>12 years</strong>. For the past decade she has been working for the Fortune 500 company <strong>IBM</strong>.</p>
-                <p>Erin has some educational background in programming but she is mainly <strong>self-taught</strong> in all things front end related. Erin is a <strong>passionate</strong> Front End Developer who focuses on writing <strong>clean</strong>, <strong>elegant</strong> and <strong>efficient code</strong>.</p>
-              </div>
+      <section className="content-section three">
+        <div className="main-content">
+          <div className="about-me">
+            <h2>About me</h2>
+            <ExperienceTimer />
+            <div className="aboutme-section">
+              <p>Erin Keller loves programming, solving problems, working in a team, and continuously learning new things. She's been <strong>developing Front End applications</strong> for over <strong>12 years</strong>. For the past decade she has been working for the Fortune 500 company <strong>IBM</strong>.</p>
+              <p>Erin has some educational background in programming but she is mainly <strong>self-taught</strong> in all things front end related. Erin is a <strong>passionate</strong> Front End Developer who focuses on writing <strong>clean</strong>, <strong>elegant</strong> and <strong>efficient code</strong>.</p>
             </div>
           </div>
-        </article>
+        </div>
+      </section>
     );
   }
 }

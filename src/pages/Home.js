@@ -4,7 +4,7 @@ import selfImg from "../assets/images/erin.jpeg";
 class Home extends Component {
   render() {
     return (
-      <div className="content-section two">
+      <section className="content-section two">
         <div className="main-content">
           <div className="home">
             <div className="hero">
@@ -15,7 +15,7 @@ class Home extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }
