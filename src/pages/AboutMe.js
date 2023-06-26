@@ -69,7 +69,7 @@ class AboutMe extends Component {
         className="content-section three"
       >
         <div className="main-content">
-          <motion.div variants={childAnimation} transition={{ duration: 0.5 }} className="about-me">
+          <motion.div variants={childAnimation} transition={{ duration: 0.5 }} className="about-me container">
             <h1 className="header-title">About <span className="emphasis">me</span>.</h1>
             <div className="self">
               <div className="img-container">

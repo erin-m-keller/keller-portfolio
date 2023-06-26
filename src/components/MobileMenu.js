@@ -19,7 +19,7 @@ class MobileMenu extends Component {
                 </div>
             </a>
             <ul role="menu" aria-labelledby="menu-btn" className={showMobileMenu ? "active" : "inactive"}>
-                <li><a href="/" onClick={() => setMobileMenu(!showMobileMenu)}>About Me</a></li>
+                <li><a href="/portfolio" onClick={() => setMobileMenu(!showMobileMenu)}>About Me</a></li>
                 <li><a href="/work" onClick={() => setMobileMenu(!showMobileMenu)}>Work</a></li>
                 <li><a href="/contact" onClick={() => setMobileMenu(!showMobileMenu)}>Contact</a></li>
                 <li><a href="/resume" onClick={() => setMobileMenu(!showMobileMenu)}>Resume</a></li>

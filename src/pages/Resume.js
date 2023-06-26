@@ -24,7 +24,7 @@ class Resume extends Component {
         className="content-section four"
       >
         <div className="main-content">
-          <motion.div variants={childAnimation} transition={{ duration: 0.5 }} className="resume">
+          <motion.div variants={childAnimation} transition={{ duration: 0.5 }} className="resume container">
             <h1 className="header-title">My <span className="emphasis">resume</span>.</h1>
             <div className="resume-form">
               <div className="main">

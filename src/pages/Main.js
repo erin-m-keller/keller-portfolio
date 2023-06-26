@@ -74,7 +74,7 @@ function Main () {
             <main className="content" id="main">
             <AnimatePresence mode="wait" initial={false}>
                 <Routes location={location}>
-                    <Route path="/" element={<AboutMe />} />
+                    <Route path="/portfolio" element={<AboutMe />} />
                     <Route path="/work" element={<Work />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/resume" element={<Resume />} />

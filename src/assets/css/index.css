@@ -526,10 +526,10 @@ p {
     font-size: 2.625rem;
     padding-left: 0.5rem;
 }
-.dark .content-section .main-content div:first-child {
+.dark .content-section .main-content .container {
     box-shadow: inset 0 10px 9px -10px rgba(0,0,0,0.4);
 }
-.light .content-section .main-content div:first-child {
+.light .content-section .main-content .container {
     box-shadow: inset 0 10px 9px -10px rgba(0,0,0,0.4);
 }
 

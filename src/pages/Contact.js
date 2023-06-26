@@ -48,7 +48,7 @@ class Contact extends Component {
         className="content-section three"
       >
         <div className="main-content">
-          <motion.div variants={childAnimation} transition={{ duration: 0.5 }} className="contact-me">
+          <motion.div variants={childAnimation} transition={{ duration: 0.5 }} className="contact-me container">
             <h1 className="header-title">Contact <span className="emphasis">me</span>.</h1>
             <ContactForm />
           </motion.div>

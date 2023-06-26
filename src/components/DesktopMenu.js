@@ -11,7 +11,7 @@ class MobileMenu extends Component {
     return (
       <nav className="desktop-menu">
         <ul role="menu" aria-labelledby="menu-btn">
-            <li role="listitem"><NavLink to="/">About Me</NavLink></li>
+            <li role="listitem"><NavLink to="/portfolio">About Me</NavLink></li>
             <li role="listitem"><NavLink to="/work">Work</NavLink></li>
             <li role="listitem"><NavLink to="/contact">Contact</NavLink></li>
             <li role="listitem"><NavLink to="/resume">Resume</NavLink></li>

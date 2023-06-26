@@ -43,7 +43,7 @@ class Work extends Component {
   >
       <section className="content-section two">
             <div className="main-content">
-                  <motion.div variants={childAnimation} transition={{ duration: 0.5 }} className="work">
+                  <motion.div variants={childAnimation} transition={{ duration: 0.5 }} className="work container">
                         <h1 className="header-title">Collaborative <span className="emphasis">initiatives</span>.</h1>
                         <div className="card-list" style={{marginBottom:"2em"}}>
                               <Card cardUrl="https://meta-insight.herokuapp.com/"
