@@ -23,38 +23,41 @@ import metaInsightScreenshot from "../assets/images/meta-insight.png";
 
 class Work extends Component {
   render() {
-      const cardVariants = {
-            hidden: { opacity: 0, y: 20 },
-            visible: { opacity: 1, y: 0 },
+      const variants = {
+        initial: { opacity: 0 },
+        enter: { opacity: 1 },
+        exit: { opacity: 0 },
+      };
+      const childAnimation = {
+        initial: { opacity: 0, y: 60 },
+        enter: { opacity: 1, y: 0 },
+        exit: { opacity: 0, y: 60 },
       };
     return (
+      <motion.div
+      initial="initial"
+      animate="enter"
+      exit="exit"
+      variants={variants}
+      transition={{ duration: 0.3 }}
+  >
       <section className="content-section two">
             <div className="main-content">
-                  <div className="work">
+                  <motion.div variants={childAnimation} transition={{ duration: 0.5 }} className="work">
                         <h2>Collaborations</h2>
                         <div className="card-list" style={{marginBottom:"2em"}}>
-                              <motion.div
-                                    variants={cardVariants}
-                                    exit="hidden"
-                              >
-                                    <Card cardUrl="https://meta-insight.herokuapp.com/"
-                                          btnUrl="https://github.com/erin-m-keller/meta-insight"
-                                          src={metaInsightScreenshot}
-                                          alt="Meta-Insight"
-                                          title="Meta-Insight"
-                                          tags={["#html","#css","#ionic","#javascript","#mysql","express","#jawsdb","#handlebars"]} />
-                              </motion.div>
-                              <motion.div
-                                    variants={cardVariants}
-                                    exit="hidden"
-                              >
-                                    <Card cardUrl="https://erin-m-keller.github.io/volunteer-finder/"
-                                          btnUrl="https://github.com/erin-m-keller/volunteer-finder"
-                                          src={volunteerFinderScreenshot}
-                                          alt="Volunteer Finder"
-                                          title="Volunteer Finder"
-                                          tags={["#html","#css","#bulma-css","#javascript","#firebase"]} />
-                              </motion.div>
+                              <Card cardUrl="https://meta-insight.herokuapp.com/"
+                                    btnUrl="https://github.com/erin-m-keller/meta-insight"
+                                    src={metaInsightScreenshot}
+                                    alt="Meta-Insight"
+                                    title="Meta-Insight"
+                                    tags={["#html","#css","#ionic","#javascript","#mysql","express","#jawsdb","#handlebars"]} />
+                              <Card cardUrl="https://erin-m-keller.github.io/volunteer-finder/"
+                                    btnUrl="https://github.com/erin-m-keller/volunteer-finder"
+                                    src={volunteerFinderScreenshot}
+                                    alt="Volunteer Finder"
+                                    title="Volunteer Finder"
+                                    tags={["#html","#css","#bulma-css","#javascript","#firebase"]} />
                         </div>
                         <h2>Personal Web Projects</h2>
                         <div className="card-list" style={{marginBottom:"2em"}}>
@@ -158,9 +161,10 @@ class Work extends Component {
                               title="README Generator Node.js"
                               tags={["#javascript","#nodeJS","#fs","#inquirer"]} />
                         </div>
-                  </div>
+                  </motion.div>
             </div>
       </section>
+      </motion.div>
     );
   }
 }

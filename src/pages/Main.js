@@ -6,7 +6,7 @@ import Resume from "./Resume";
 import Work from "./Work";
 import MobileMenu from "../components/MobileMenu";
 import DesktopMenu from "../components/DesktopMenu";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 import {
     Route,
@@ -18,14 +18,8 @@ function Main () {
     // initialize hooks/variables
     const [showMobileMenu, setMobileMenu] = useState(null),
           [isMobile, setIsMobile] = useState(false),
-          [isTransitioning, setIsTransitioning] = useState(false),
           windowSize = useRef([window.innerWidth, window.innerHeight]),
-          location = useLocation(),
-          variants = {
-            initial: { opacity: 0 },
-            enter: { opacity: 1 },
-            exit: { opacity: 0 },
-          };
+          location = useLocation();
 
     // Close mobile menu when window is resized
     if (!isMobile && showMobileMenu) {
@@ -47,12 +41,7 @@ function Main () {
         if (windowSize.current[0] <= 600) {
             setIsMobile(true);
         }
-        setIsTransitioning(true);
-        const timeout = setTimeout(() => {
-          setIsTransitioning(false);
-        }, 300); 
-        return () => clearTimeout(timeout);
-    }, [isMobile,showMobileMenu],[location]);
+    }, [isMobile,showMobileMenu]);
 
     return (
         <React.Fragment>
@@ -71,31 +60,21 @@ function Main () {
             {/* main content */}
             <main className="content" id="main">
             <AnimatePresence mode="wait" initial={false}>
-                <motion.div
-                    key={location.pathname}
-                    initial="initial"
-                    animate="enter"
-                    exit="exit"
-                    variants={variants}
-                    transition={{ duration: 0.3 }}
-                >
-                    <Routes location={location}>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/about" element={<AboutMe />} />
-                        <Route path="/work" element={<Work />} />
-                        <Route path="/contact" element={<Contact />} />
-                        <Route path="/resume" element={<Resume />} />
-                    </Routes>
-
-                    {/* footer */}
-                    <footer className="footer">
-                        <div className="vertical-center">
-                            <h4>&copy; 2023 Erin Keller</h4>
-                        </div>
-                    </footer>
-                </motion.div>
+                <Routes location={location}>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<AboutMe />} />
+                    <Route path="/work" element={<Work />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/resume" element={<Resume />} />
+                </Routes>
             </AnimatePresence>
             </main>
+            {/* footer */}
+            <footer className="footer">
+                <div className="vertical-center">
+                    <h4>&copy; 2023 Erin Keller</h4>
+                </div>
+            </footer>
         </React.Fragment>
     );
 }

@@ -1,4 +1,5 @@
 import React, { Component, useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 // @ExperienceTimer function is modified from the code found on 
 // this blog post by Julia: https://dev.to/yuridevat/how-to-create-a-timer-with-react-7b9 
@@ -47,19 +48,36 @@ function ExperienceTimer() {
 }
 class AboutMe extends Component {
   render() {
+    const variants = {
+      initial: { opacity: 0 },
+      enter: { opacity: 1 },
+      exit: { opacity: 0 },
+    };
+    const childAnimation = {
+      initial: { opacity: 0, y: 60 },
+      enter: { opacity: 1, y: 0 },
+      exit: { opacity: 0, y: 60 },
+    };
     return (
-      <section className="content-section three">
+      <motion.section
+        initial="initial"
+        animate="enter"
+        exit="exit"
+        variants={variants}
+        transition={{ duration: 0.3 }}
+        className="content-section three"
+      >
         <div className="main-content">
-          <div className="about-me">
+          <motion.div variants={childAnimation} transition={{ duration: 0.5 }} className="about-me">
             <h2>About me</h2>
             <ExperienceTimer />
             <div className="aboutme-section">
               <p>Erin Keller loves programming, solving problems, working in a team, and continuously learning new things. She's been <strong>developing Front End applications</strong> for over <strong>12 years</strong>. For the past decade she has been working for the Fortune 500 company <strong>IBM</strong>.</p>
               <p>Erin has some educational background in programming but she is mainly <strong>self-taught</strong> in all things front end related. Erin is a <strong>passionate</strong> Front End Developer who focuses on writing <strong>clean</strong>, <strong>elegant</strong> and <strong>efficient code</strong>.</p>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
     );
   }
 }
