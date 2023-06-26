@@ -30,6 +30,7 @@ function Main () {
         setIsMobile(false)
     }
 
+    // toggle the light or dark theme for the site
     const toggleTheme = (selectedTheme) => {
         if (selectedTheme === 'light') {
             setTheme('light');
@@ -67,7 +68,7 @@ function Main () {
             {/* main header */}
             <header className="header">
                 <a className="skip-link" href="#main" tabIndex="1">Skip Navigation Links</a>
-                <DesktopMenu toggleTheme={toggleTheme} />
+                <DesktopMenu currentTheme={theme} toggleTheme={toggleTheme} />
                 <MobileMenu setMobileMenu={setMobileMenu} toggleTheme={toggleTheme} showMobileMenu={showMobileMenu} />
             </header>
             {/* main content */}

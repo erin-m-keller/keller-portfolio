@@ -228,9 +228,19 @@ p {
 .dark .header nav ul li span {
     color: #FFF;
 }
+.dark .header nav ul li.active span,
+.dark .header nav ul li.active svg {
+    color: #FFEB3B;
+    fill: #FFEB3B;
+}
 .light .header nav ul li a,
 .light .header nav ul li span {
     color: #191919;
+}
+.light .header nav ul li.active span,
+.light .header nav ul li.active svg {
+    color: #9C27B0;
+    fill: #9C27B0;
 }
 .header nav ul li a,
 .header nav ul li span {
