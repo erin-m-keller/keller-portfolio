@@ -13,6 +13,7 @@ function ContactForm() {
   const [msgVal, setMsgVal] = useState('');
   const [showNameRequired, setShowNameRequired] = useState(false);
   const [showEmailRequired, setShowEmailRequired] = useState(false);
+  const [showInvalidEmail, setShowInvalidEmail] = useState(false);
   const [showMsgRequired, setShowMsgRequired] = useState(false);
   // animation params for form
   const formAnimation = {
@@ -38,6 +39,15 @@ function ContactForm() {
           setShowEmailRequired(false);
         }, 1000);
       } else {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (emailRegex.test(emailVal.trim())) {
+          setShowInvalidEmail(false);
+        } else {
+          setShowInvalidEmail(true);
+          setTimeout(() => {
+            setShowInvalidEmail(false);
+          }, 1000);
+        }
         setShowEmailRequired(false);
       }
     } else if (val === 'msg') {
@@ -67,6 +77,7 @@ function ContactForm() {
           Email Address:
           <motion.input id="email" type="email" name="email" transition={{ duration: 1.5 }} onChange={(e) => setEmailVal(e.target.value)} onBlur={() => handleBlur('email')} required />
           {showEmailRequired && <span className="tag tag-sm">Email is required.</span>}
+          {showInvalidEmail && <span className="tag tag-sm">A valid email address is required.</span>}
           <ValidationError prefix="Email" field="email" errors={state.errors} />
         </motion.label>
         <motion.label htmlFor="message" variants={formAnimation} transition={{ duration: 1.5 }}>
