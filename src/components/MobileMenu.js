@@ -20,7 +20,7 @@ class MobileMenu extends Component {
                 </div>
             </a>
             <ul role="menu" aria-labelledby="menu-btn" className={showMobileMenu ? "active" : "inactive"}>
-                <li role="listitem" className="nav-name"><FontAwesomeIcon icon={faCode} />&nbsp;Erin Keller {currentTheme}</li>
+                <li role="listitem" className="nav-name"><FontAwesomeIcon icon={faCode} />&nbsp;Erin Keller</li>
                 <li role="listitem"><a href="/" onClick={() => setMobileMenu(!showMobileMenu)}>About Me</a></li>
                 <li role="listitem"><a href="/portfolio" onClick={() => setMobileMenu(!showMobileMenu)}>Portfolio</a></li>
                 <li role="listitem"><a href="/contact" onClick={() => setMobileMenu(!showMobileMenu)}>Contact</a></li>

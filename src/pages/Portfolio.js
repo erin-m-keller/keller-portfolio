@@ -135,8 +135,8 @@ class Portfolio extends Component {
                                     <Card cardUrl="https://erin-m-keller.github.io/keller-portfolio/#/"
                                           btnUrl="https://github.com/erin-m-keller/keller-portfolio"
                                           src={portfolioScreenshot}
-                                          alt="Erin Keller Portfolio"
-                                          title="Erin Keller Portfolio"
+                                          alt="Erin Keller Portfolio - Old"
+                                          title="Erin Keller Portfolio - Old"
                                           tags={["#html","#css","#javascript","#react"]} />
                               </motion.article>
                               <motion.article variants={cardElem} transition={{ duration: 1.5 }}>
