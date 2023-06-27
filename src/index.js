@@ -3,13 +3,13 @@ import ReactDOM from "react-dom/client";
 import "./assets/css/index.css";
 import "react-image-gallery/styles/css/image-gallery.css";
 import Main from "./pages/Main";
-import { BrowserRouter } from "react-router-dom"
+import { HashRouter } from "react-router-dom"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <BrowserRouter>
+    <HashRouter>
         <React.StrictMode>
             <Main />
         </React.StrictMode>
-    </BrowserRouter>
+    </HashRouter>
 );
