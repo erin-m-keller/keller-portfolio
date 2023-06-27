@@ -37,7 +37,7 @@ function ExperienceTimer() {
     }, []);
     return (
         <div className="timer">
-          <p>I have been a front end developer for...</p>
+          <p>I have been a <strong>&lt;front end developer&#47;&gt;</strong> for...</p>
           <div className="flex-columns">
             <div className="col"><span className="days">{days} days</span></div>
             <div className="col"><span className="hours">{hours} hours</span></div>

@@ -26,9 +26,9 @@
     --bg-color-four-dark: #61303e;
     --bg-color-five-dark: #2b293f;
     --bg-color-six-dark: #98ae80;
-    --font-main-style: "Roboto Slab", serif;
-    --font-sub-style: "Dosis", sans-serif;
-    --font-timer-style: "Secular One", sans-serif;
+    --font-main-style: "Volkhov", serif;
+    --font-sub-style: "Tsukimi Rounded", sans-serif;
+    --font-timer-style: "Source Code Pro", sans-serif;
     --font-aboutme-style: "Merienda", sans-serif;
 
     --darkbg-color: #2d2d2d;
@@ -247,9 +247,8 @@ p {
     font-family: var(--font-sub-style);
     display: inline-block;
     text-decoration: none;
-    color: #191919;
-    font-size: 1.125rem;
-    letter-spacing: 2px;
+    font-size: 1em;
+    letter-spacing: 0;
     position: relative;
     padding: 0.5rem;
     cursor: pointer;
@@ -558,13 +557,15 @@ p {
     padding: 2rem;
 }
 .about-me .timer p {
-    font-size: 38px;
+    font-size: 3em;
     text-align: center;
     margin-bottom: 2rem;
     color: #191919;
+    font-family: var(--font-sub-style);
+    letter-spacing: -3px;
 }
 .dark .about-me .timer span {
-    background-image: linear-gradient(90deg, #af2f2f 0%, #bb4d4d 33%, #333 67%, #191919 100%);
+    background-image: linear-gradient(90deg, #ffeb3b 0%, #f9ee8b 33%, #333 67%, #191919 100%);
 }
 .light .about-me .timer span {
     background-image: linear-gradient(90deg, #0f9d9a 0%, #12D3CF 33%, #333 67%, #191919 100%);
