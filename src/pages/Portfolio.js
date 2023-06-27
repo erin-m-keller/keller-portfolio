@@ -26,7 +26,7 @@ import pwaScreenshot from "../assets/images/pwa-screenshot.png";
 import socialScreenshot from "../assets/images/social-api.png";
 import ecommerceScreenshot from "../assets/images/ecommerce-screenshot.png";
 
-class Work extends Component {
+class Portfolio extends Component {
   render() {
       const parentElem = {
         initial: { opacity: 0 },
@@ -239,4 +239,4 @@ class Work extends Component {
   }
 }
  
-export default Work;
+export default Portfolio;

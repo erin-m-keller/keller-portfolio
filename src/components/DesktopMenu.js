@@ -13,8 +13,8 @@ class MobileMenu extends Component {
       <nav className="desktop-menu">
         <ul role="menu" aria-labelledby="menu-btn">
             <li role="listitem" className="nav-name"><FontAwesomeIcon icon={faCode} />&nbsp;Erin Keller</li>
-            <li role="listitem"><NavLink to="/portfolio">About Me</NavLink></li>
-            <li role="listitem"><NavLink to="/work">Work</NavLink></li>
+            <li role="listitem"><NavLink to="/">About Me</NavLink></li>
+            <li role="listitem"><NavLink to="/portfolio">Portfolio</NavLink></li>
             <li role="listitem"><NavLink to="/contact">Contact</NavLink></li>
             <li role="listitem"><NavLink to="/resume">Resume</NavLink></li>
             <li role="listitem" className={`toggle-theme ${currentTheme === 'light' ? 'active' : ''}`}><span onClick={() => toggleTheme('light')}><FontAwesomeIcon icon={faSun} />&nbsp;Light Mode</span></li>

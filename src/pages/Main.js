@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import AboutMe from "./AboutMe";
 import Contact from "./Contact";
 import Resume from "./Resume";
-import Work from "./Work";
+import Portfolio from "./Portfolio";
 import MobileMenu from "../components/MobileMenu";
 import DesktopMenu from "../components/DesktopMenu";
 import Footer from "../components/Footer";
@@ -76,8 +76,8 @@ function Main () {
             <main className="content" id="main">
                 <AnimatePresence mode="wait" initial={false}>
                     <Routes location={location}>
-                        <Route path="/portfolio" element={<AboutMe />} />
-                        <Route path="/work" element={<Work />} />
+                        <Route path="/" element={<AboutMe />} />
+                        <Route path="/portfolio" element={<Portfolio />} />
                         <Route path="/contact" element={<Contact />} />
                         <Route path="/resume" element={<Resume />} />
                     </Routes>
