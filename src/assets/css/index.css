@@ -811,7 +811,6 @@ p.personal-txt {
     border-right: none;
     border-top: none;
     height: 3rem;
-    margin-bottom: 4rem;
     padding: 1em;
     font-size: 1.25em;
 }
@@ -822,7 +821,6 @@ p.personal-txt {
     border-left: 1px dotted var(--bg-color-five-dark);
     border-right: 1px dotted var(--bg-color-five-dark);
     border-top: 1px dotted var(--bg-color-five-dark);
-    margin-bottom: 4rem;
     padding: 1em;
     font-size: 1.25em;
 }
