@@ -69,7 +69,7 @@ function Main () {
             <header className="header">
                 <a className="skip-link" href="#main" tabIndex="1">Skip Navigation Links</a>
                 <DesktopMenu currentTheme={theme} toggleTheme={toggleTheme} />
-                <MobileMenu setMobileMenu={setMobileMenu} toggleTheme={toggleTheme} showMobileMenu={showMobileMenu} />
+                <MobileMenu currentTheme={theme} setMobileMenu={setMobileMenu} toggleTheme={toggleTheme} showMobileMenu={showMobileMenu} />
             </header>
             {/* main content */}
             <main className="content" id="main">

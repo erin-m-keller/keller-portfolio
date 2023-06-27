@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faMoon, faSun, faCode } from '@fortawesome/free-solid-svg-icons';
  
 class MobileMenu extends Component {
   render() {
     let showMobileMenu = this.props.showMobileMenu,
         setMobileMenu = this.props.setMobileMenu,
-        toggleTheme = this.props.toggleTheme;
+        toggleTheme = this.props.toggleTheme,
+        currentTheme = this.props.currentTheme;
     return (
         <nav className={`mobile-menu ${!showMobileMenu ? "closed" : ""}`}>
             <a href="#" onClick={() => setMobileMenu(!showMobileMenu)} className={showMobileMenu ? "active" : ""} id="menu-btn">
@@ -19,12 +20,13 @@ class MobileMenu extends Component {
                 </div>
             </a>
             <ul role="menu" aria-labelledby="menu-btn" className={showMobileMenu ? "active" : "inactive"}>
-                <li><a href="/portfolio" onClick={() => setMobileMenu(!showMobileMenu)}>About Me</a></li>
-                <li><a href="/work" onClick={() => setMobileMenu(!showMobileMenu)}>Work</a></li>
-                <li><a href="/contact" onClick={() => setMobileMenu(!showMobileMenu)}>Contact</a></li>
-                <li><a href="/resume" onClick={() => setMobileMenu(!showMobileMenu)}>Resume</a></li>
-                <li className="toggle-theme-mobile"><span onClick={() => {toggleTheme('light');setMobileMenu(!showMobileMenu);}}><FontAwesomeIcon icon={faSun} />&nbsp;Light Mode</span></li>
-                <li className="toggle-theme-mobile"><span onClick={() => {toggleTheme('dark');setMobileMenu(!showMobileMenu);}}><FontAwesomeIcon icon={faMoon} />&nbsp;Dark Mode</span></li>
+                <li role="listitem" className="nav-name"><FontAwesomeIcon icon={faCode} />&nbsp;Erin Keller {currentTheme}</li>
+                <li role="listitem"><a href="/portfolio" onClick={() => setMobileMenu(!showMobileMenu)}>About Me</a></li>
+                <li role="listitem"><a href="/work" onClick={() => setMobileMenu(!showMobileMenu)}>Work</a></li>
+                <li role="listitem"><a href="/contact" onClick={() => setMobileMenu(!showMobileMenu)}>Contact</a></li>
+                <li role="listitem"><a href="/resume" onClick={() => setMobileMenu(!showMobileMenu)}>Resume</a></li>
+                <li role="listitem" className={`toggle-theme-mobile ${currentTheme === 'light' ? 'active' : ''}`}><span onClick={() => {toggleTheme('light');setMobileMenu(!showMobileMenu);}}><FontAwesomeIcon icon={faSun} />&nbsp;Light Mode</span></li>
+                <li role="listitem" className={`toggle-theme-mobile ${currentTheme === 'dark' ? 'active' : ''}`}><span onClick={() => {toggleTheme('dark');setMobileMenu(!showMobileMenu);}}><FontAwesomeIcon icon={faMoon} />&nbsp;Dark Mode</span></li>
             </ul>
         </nav>
     );

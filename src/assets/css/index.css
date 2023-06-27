@@ -93,7 +93,7 @@ p {
     background-color: transparent;
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: fixed;
 }
 .back-drop.closed {
     opacity: 0;  
@@ -108,7 +108,8 @@ p {
     -webkit-animation: fadeIn 0.25s ease-in 0s 0.7 normal forwards;  
     -moz-animation: fadeIn 0.25s ease-in 0s 0.7 normal forwards;
     animation: fadeIn 0.25s ease-in 0s 0.7 normal forwards;
-    z-index: 9999;
+    z-index: 2;
+    display: block;
 }
 .skip-link {
     position: absolute;
@@ -233,8 +234,7 @@ p {
     color: #FFEB3B;
     fill: #FFEB3B;
 }
-.light .header nav ul li a,
-.light .header nav ul li span {
+.light .header nav ul li a {
     color: #191919;
 }
 .light .header nav ul li.active span,
@@ -255,7 +255,6 @@ p {
 }
 .header nav.mobile-menu ul li a,
 .header nav.mobile-menu ul li span {
-    color: transparent;
     background-color: transparent;
     transition: color 3s ease, background-color 3s ease;
 }
@@ -285,12 +284,10 @@ p {
     left: 50%;
     bottom: 0;
 }
-.dark .header nav.mobile-menu ul.active li a,
-.dark .header nav.mobile-menu ul.active li span {
+.dark .header nav.mobile-menu ul.active li a {
     color: #FFF;
 }
-.light .header nav.mobile-menu ul.active li a,
-.light .header nav.mobile-menu ul.active li span {
+.light .header nav.mobile-menu ul.active li a {
     color: #191919;
 }
 .header nav.mobile-menu ul.inactive li a,
@@ -368,7 +365,7 @@ p {
     transform: rotate(45deg);
     top: 1.55rem;
 }
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 1030px) {
     .header nav.desktop-menu {
         display: block;
     }
