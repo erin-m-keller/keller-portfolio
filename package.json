@@ -1,7 +1,7 @@
 {
   "name": "react-app",
   "version": "0.1.0",
-  "homepage": "https://erin-m-keller.github.io/keller-portfolio/",
+  "homepage": ".",
   "private": false,
   "dependencies": {
     "@formspree/react": "^2.4.1",
