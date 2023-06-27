@@ -3,7 +3,7 @@ import {
   NavLink
 } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faMoon, faSun, faCode } from '@fortawesome/free-solid-svg-icons';
  
 class MobileMenu extends Component {
   render() {
@@ -12,6 +12,7 @@ class MobileMenu extends Component {
     return (
       <nav className="desktop-menu">
         <ul role="menu" aria-labelledby="menu-btn">
+            <li role="listitem" className="nav-name"><FontAwesomeIcon icon={faCode} />&nbsp;Erin Keller</li>
             <li role="listitem"><NavLink to="/portfolio">About Me</NavLink></li>
             <li role="listitem"><NavLink to="/work">Work</NavLink></li>
             <li role="listitem"><NavLink to="/contact">Contact</NavLink></li>

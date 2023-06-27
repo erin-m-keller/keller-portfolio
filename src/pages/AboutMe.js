@@ -1,5 +1,7 @@
 import React, { Component, useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDove } from '@fortawesome/free-solid-svg-icons';
 import selfImg from "../assets/images/erin.jpeg";
 
 // @ExperienceTimer function is modified from the code found on 
@@ -75,7 +77,7 @@ class AboutMe extends Component {
       >
         <div className="main-content">
           <motion.div variants={childElem} transition={{ duration: 0.5 }} className="about-me container">
-            <h1 className="header-title">About <span className="emphasis">me</span>.</h1>
+            <h1 className="header-title">About <span className="emphasis">me</span>. <FontAwesomeIcon icon={faDove} /></h1>
             <div className="self">
             <motion.div
               initial="initial"

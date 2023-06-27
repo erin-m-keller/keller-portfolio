@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { useForm, ValidationError } from '@formspree/react';
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
 
 // @ContactForm made with Formspree: https://formspree.io/
 function ContactForm() {
@@ -68,7 +70,7 @@ class Contact extends Component {
       >
         <div className="main-content">
           <motion.div variants={childElem} transition={{ duration: 0.5 }} className="contact-me container">
-            <h1 className="header-title">Contact <span className="emphasis">me</span>.</h1>
+            <h1 className="header-title">Contact <span className="emphasis">me</span>. <FontAwesomeIcon icon={faAddressCard} /></h1>
             <ContactForm />
           </motion.div>
         </div>

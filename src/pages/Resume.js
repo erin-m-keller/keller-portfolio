@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFire } from '@fortawesome/free-solid-svg-icons';
 import resume from "../assets/documents/erin-resume.pdf";
  
 class Resume extends Component {
@@ -30,7 +32,7 @@ class Resume extends Component {
       >
         <div className="main-content">
           <motion.div variants={childElem} transition={{ duration: 0.5 }} className="resume container">
-            <h1 className="header-title">My <span className="emphasis">resume</span>.</h1>
+            <h1 className="header-title">My <span className="emphasis">resume</span>. <FontAwesomeIcon icon={faFire} /></h1>
             <motion.div className="resume-form" variants={resumeElem} transition={{ duration: 1.5 }}>
               <div className="main">
                 <div className="edu-exp">

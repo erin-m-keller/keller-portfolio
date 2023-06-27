@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { motion } from "framer-motion";
 import Card from "../components/Card";
 import NodeCard from "../components/NodeCard";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPeopleGroup, faPerson, faTerminal } from '@fortawesome/free-solid-svg-icons';
 import portfolioScreenshot from "../assets/images/portfolio-screenshot.png";
 import recipeAppScreenshot from "../assets/images/recipe-app-screenshot.png";
 import lastFmScreenshot from "../assets/images/lastfm-screenshot.png";
@@ -52,7 +54,7 @@ class Work extends Component {
       <section className="content-section two">
             <div className="main-content">
                   <motion.div variants={childElem} transition={{ duration: 0.5 }} className="work container">
-                        <h1 className="header-title">Collaborative <span className="emphasis">initiatives</span>.</h1>
+                        <h1 className="header-title">Collaborative <span className="emphasis">initiatives</span>. <FontAwesomeIcon icon={faPeopleGroup} /></h1>
                         <div className="card-list" style={{marginBottom:"2em"}}>
                               <motion.article variants={cardElem} transition={{ duration: 1.5 }}>
                                     <Card cardUrl="https://meta-insight.herokuapp.com/"
@@ -71,7 +73,7 @@ class Work extends Component {
                                           tags={["#html","#css","#bulma-css","#javascript","#firebase"]} />
                               </motion.article>
                         </div>
-                        <h1 className="header-title">Personal <span className="emphasis">web projects</span>.</h1>
+                        <h1 className="header-title">Personal <span className="emphasis">web projects</span>. <FontAwesomeIcon icon={faPerson} /></h1>
                         <div className="card-list" style={{marginBottom:"2em"}}>
                               <motion.article variants={cardElem} transition={{ duration: 1.5 }}>
                                     <Card cardUrl="https://keller-text-editor-c96daa18d32b.herokuapp.com/"
@@ -186,7 +188,7 @@ class Work extends Component {
                                           tags={["#html","#css","#bulma-css","#javascript","#react","#lastfm api"]} />
                               </motion.article>
                         </div>
-                        <h1 className="header-title">Terminal <span className="emphasis">applications</span>.</h1>
+                        <h1 className="header-title">Terminal <span className="emphasis">applications</span>. <FontAwesomeIcon icon={faTerminal} /></h1>
                         <div className="card-list" style={{marginBottom:"2em"}}>
                               <motion.article variants={cardElem} transition={{ duration: 1.5 }}>
                                     <NodeCard cardUrl="javascript:void(0)"

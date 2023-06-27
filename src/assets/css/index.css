@@ -454,6 +454,16 @@ p {
     background: var(--bg-color-one);
     z-index: 2;
 }
+.nav-name {
+    font-family: var(--font-sub-style);
+    font-weight: bold;
+}
+.dark .nav-name {
+    color: #FFEB3B;
+}
+.light .nav-name {
+    color: #9C27B0;
+}
 @media screen and (min-width: 600px) {
     .hero {    
         background-size: 50%;
@@ -565,10 +575,10 @@ p {
     letter-spacing: -3px;
 }
 .dark .about-me .timer span {
-    background-image: linear-gradient(90deg, #ffeb3b 0%, #f9ee8b 33%, #333 67%, #191919 100%);
+    background-image: linear-gradient(90deg, #ffeb3b 0%, #ffeb3b 33%, #191919 67%, #191919 100%);
 }
 .light .about-me .timer span {
-    background-image: linear-gradient(90deg, #0f9d9a 0%, #12D3CF 33%, #333 67%, #191919 100%);
+    background-image: linear-gradient(90deg, #9C27B0 0%, #9C27B0 33%, #191919 67%, #191919 100%);
 }
 .about-me .timer span {
     text-transform: uppercase;
