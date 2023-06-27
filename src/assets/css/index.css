@@ -461,6 +461,18 @@ p {
 .light .nav-name {
     color: #9C27B0;
 }
+div.personal {
+    float: none;
+    display: block;
+    margin: 0 auto;
+}
+p.personal-txt {
+    width: 100%;
+    display: block;
+    padding-left: 0;
+    word-wrap: break-word;
+    margin-top: 2em;
+}
 @media screen and (min-width: 600px) {
     .hero {    
         background-size: 50%;
@@ -471,6 +483,20 @@ p {
         background-size: 35%;
     }
 }
+@media screen and (min-width:1108px) {
+    div.personal {
+        width: 80%;
+        max-width: 400px;
+        float: left;
+    }
+    p.personal-txt {
+        width: calc(100% - 400px);
+        display: inline-block;
+        padding-left: 2em;
+        word-wrap: break-word;
+        margin-top: 0;
+    }
+}
 
 /************************************************
    CONTENT                               @content
@@ -479,8 +505,7 @@ p {
 ************************************************/
 .content {
     flex-grow: 1;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: hidden;
     margin-top: 3rem;
 }
 .content-section {
@@ -557,7 +582,7 @@ p {
     background-color: var(--dark-text);
 }
 .light .about-me .timer {
-    background-color: var(--lightbg-highlight-color);
+    background-color: #9C27B0;;
 }
 .about-me .timer {
     font-family: var(--font-timer-style);    
@@ -567,15 +592,15 @@ p {
     font-size: 3em;
     text-align: center;
     margin-bottom: 2rem;
-    color: #191919;
+    color: #FFF;
     font-family: var(--font-sub-style);
     letter-spacing: -3px;
 }
 .dark .about-me .timer span {
-    background-image: linear-gradient(90deg, #ffeb3b 0%, #ffeb3b 33%, #191919 67%, #191919 100%);
+    background-image: linear-gradient(90deg, #ffeb3b 0%, #ffeb3b 33%, #FFF 67%, #FFF 100%);
 }
 .light .about-me .timer span {
-    background-image: linear-gradient(90deg, #9C27B0 0%, #9C27B0 33%, #191919 67%, #191919 100%);
+    background-image: linear-gradient(90deg, var(--lightbg-highlight-color) 0%, var(--lightbg-highlight-color) 33%, #FFF 67%, #FFF 100%);
 }
 .about-me .timer span {
     text-transform: uppercase;
@@ -623,22 +648,23 @@ p {
 .aboutme-section p {
     font-family: var(--font-main-style);
     font-weight: 300;
-    font-size: 22px;
-    line-height: 45px;
+    font-size: 20px;
+    line-height: 40px;
+    margin-bottom: 1em;
 }
 .dark .aboutme-section strong {
-    background: #fc7979;
+    background: #FFEB3B;
     color: #191919;
 }
 .light .aboutme-section strong {
-    background: var(--lightbg-highlight-color);
-    color: #191919;
+    background: #9C27B0;
+    color: #FFF;
 }
 .aboutme-section strong {
     font-family: var(--font-main-style);
     font-weight: 600;
-    font-size: 22px;
-    line-height: 45px;
+    font-size: 20px;
+    line-height: 40px;
     display: inline;
     padding: 0.25em;
 }

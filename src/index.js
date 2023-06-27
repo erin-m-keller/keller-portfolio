@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./assets/css/index.css";
+import "react-image-gallery/styles/css/image-gallery.css";
 import Main from "./pages/Main";
 import { BrowserRouter } from "react-router-dom"
 
