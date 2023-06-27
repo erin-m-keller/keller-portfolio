@@ -4,29 +4,34 @@ import resume from "../assets/documents/erin-resume.pdf";
  
 class Resume extends Component {
   render() {
-    const variants = {
+    const parentElem = {
       initial: { opacity: 0 },
       enter: { opacity: 1 },
       exit: { opacity: 0 },
     };
-    const childAnimation = {
+    const childElem = {
       initial: { opacity: 0, y: 60 },
       enter: { opacity: 1, y: 0 },
       exit: { opacity: 0, y: 60 },
+    };
+    const resumeElem = {
+      initial: { opacity: 0, x: 200 },
+      enter: { opacity: 1, x: 0 },
+      exit: { opacity: 0, x: 200 },
     };
     return (
       <motion.section
         initial="initial"
         animate="enter"
         exit="exit"
-        variants={variants}
+        variants={parentElem}
         transition={{ duration: 0.3 }}
         className="content-section four"
       >
         <div className="main-content">
-          <motion.div variants={childAnimation} transition={{ duration: 0.5 }} className="resume container">
+          <motion.div variants={childElem} transition={{ duration: 0.5 }} className="resume container">
             <h1 className="header-title">My <span className="emphasis">resume</span>.</h1>
-            <div className="resume-form">
+            <motion.div className="resume-form" variants={resumeElem} transition={{ duration: 1.5 }}>
               <div className="main">
                 <div className="edu-exp">
                   <h3 className="resume-title">Erin Keller<span className="resume-subtitle">Full Stack Developer</span></h3>
@@ -153,7 +158,7 @@ class Resume extends Component {
                   </article>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </motion.section>

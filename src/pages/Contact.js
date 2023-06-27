@@ -6,6 +6,11 @@ import { motion } from "framer-motion";
 function ContactForm() {
   // initialize hooks
   const [state, handleSubmit] = useForm("xbjedlkn");
+  const formAnimation = {
+    initial: { opacity: 0, x: 200 },
+    enter: { opacity: 1, x: 0 },
+    exit: { opacity: 0, x: 200 },
+  };
   // return message when email successfully sent
   if (state.succeeded) {
       return <h1 className="thanks">Thanks for connecting with <span className="emphasis">me!</span>.</h1>;
@@ -13,27 +18,41 @@ function ContactForm() {
   return (
     <div className="contact-form">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Your Name:</label>
-        <input id="name" name="name" type="text" required />
-        <label htmlFor="email">Email Address:</label>
-        <input id="email" type="email" name="email" required />
-        <ValidationError prefix="Email" field="email" errors={state.errors} />
-        <label htmlFor="message">Message:</label>
-        <textarea id="message" name="message" required />
-        <ValidationError prefix="Message" field="message" errors={state.errors} />
-        <button type="submit" className="contact-btn" disabled={state.submitting}>Submit</button>
+        <motion.label htmlFor="name" variants={formAnimation} transition={{ duration: 1.5 }}>
+          Your Name:
+          <motion.input id="name" name="name" type="text" transition={{ duration: 1.5 }} required />
+        </motion.label>
+        <motion.label htmlFor="email" variants={formAnimation} transition={{ duration: 1.5 }}>
+          Email Address:
+          <motion.input id="email" type="email" name="email" transition={{ duration: 1.5 }} required />
+          <ValidationError prefix="Email" field="email" errors={state.errors} />
+        </motion.label>
+        <motion.label htmlFor="message" variants={formAnimation} transition={{ duration: 1.5 }}>
+          Message:
+          <motion.textarea id="message" name="message" transition={{ duration: 1.5 }} required />
+          <ValidationError prefix="Message" field="message" errors={state.errors} />
+        </motion.label>
+        <motion.button
+          type="submit"
+          className="contact-btn"
+          disabled={state.submitting}
+          variants={formAnimation}
+          transition={{ duration: 1.5 }}
+        >
+          Submit
+        </motion.button>
       </form>
     </div>
   );
 }
 class Contact extends Component {
   render() {
-    const variants = {
+    const parentElem = {
       initial: { opacity: 0 },
       enter: { opacity: 1 },
       exit: { opacity: 0 },
     };
-    const childAnimation = {
+    const childElem = {
       initial: { opacity: 0, y: 60 },
       enter: { opacity: 1, y: 0 },
       exit: { opacity: 0, y: 60 },
@@ -43,12 +62,12 @@ class Contact extends Component {
         initial="initial"
         animate="enter"
         exit="exit"
-        variants={variants}
+        variants={parentElem}
         transition={{ duration: 0.3 }}
         className="content-section three"
       >
         <div className="main-content">
-          <motion.div variants={childAnimation} transition={{ duration: 0.5 }} className="contact-me container">
+          <motion.div variants={childElem} transition={{ duration: 0.5 }} className="contact-me container">
             <h1 className="header-title">Contact <span className="emphasis">me</span>.</h1>
             <ContactForm />
           </motion.div>

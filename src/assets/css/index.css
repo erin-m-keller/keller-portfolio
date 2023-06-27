@@ -653,8 +653,18 @@ p {
     color: #191919;
     border: 5px solid var(--lightbg-highlight-color);
 }
+.card-list { 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: start;
+    width: 100%;
+    margin: 1rem auto;
+    gap: 17px;
+}
 .card-list article {
     margin-bottom: 1rem;
+    flex: 1 0 100%;
 }
 .card-list article a {
     position: relative;
@@ -714,22 +724,10 @@ p {
     border: none;
     cursor: pointer;
 }
-@media screen and (min-width:600px) {
-    .card-list { 
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: start;
-        width: 100%;
-        margin: 1rem auto;
-        gap: 17px;
-    }
-    .card-list article:nth-child(1) {
-        flex: 0 0 30%;
-    }
+@media screen and (min-width: 768px) {
     .card-list article {
         margin-bottom: 0;
-        flex: 0 0 18%;
+        flex-basis: calc(100% / 4);
     }
 }
 

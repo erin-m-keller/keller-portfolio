@@ -49,32 +49,45 @@ function ExperienceTimer() {
 }
 class AboutMe extends Component {
   render() {
-    const variants = {
+    const parentElem = {
       initial: { opacity: 0 },
       enter: { opacity: 1 },
       exit: { opacity: 0 },
     };
-    const childAnimation = {
+    const childElem = {
       initial: { opacity: 0, y: 60 },
       enter: { opacity: 1, y: 0 },
       exit: { opacity: 0, y: 60 },
+    };
+    const imgElem = {
+      initial: { opacity: 0 },
+      enter: { opacity: 1 },
+      exit: { opacity: 0 },
     };
     return (
       <motion.section
         initial="initial"
         animate="enter"
         exit="exit"
-        variants={variants}
+        variants={parentElem}
         transition={{ duration: 0.3 }}
         className="content-section three"
       >
         <div className="main-content">
-          <motion.div variants={childAnimation} transition={{ duration: 0.5 }} className="about-me container">
+          <motion.div variants={childElem} transition={{ duration: 0.5 }} className="about-me container">
             <h1 className="header-title">About <span className="emphasis">me</span>.</h1>
             <div className="self">
+            <motion.div
+              initial="initial"
+              animate="enter"
+              exit="exit"
+              variants={imgElem}
+              transition={{ duration: 3 }}
+            >
               <div className="img-container">
                 <img src={selfImg} alt="A photo of Erin Keller" />
               </div>
+            </motion.div>
             </div>
             <ExperienceTimer />
             <div className="aboutme-section">

@@ -9,7 +9,7 @@ class Card extends Component {
     let title = this.props.title;
     let tags = this.props.tags;
     return (
-      <article>
+      <div>
         <a href={cardUrl} target="_blank">
           <img src={imgSrc} alt={imgAlt} />
         </a>
@@ -25,7 +25,7 @@ class Card extends Component {
             ))}
           </div>
         </div>
-      </article>
+      </div>
     );
   }
 }
