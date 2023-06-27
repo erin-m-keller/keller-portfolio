@@ -69,11 +69,17 @@ and LinkedIn profiles, and their profile on a third platform
 
 ## Screenshot
 
-// TODO: add screenshot
+### Dark Mode
+
+![portfolioScreenshotDark](./src/assets/images/finished-product-dark.png)
+
+### Light Mode
+
+![portfolioScreenshotLight](./src/assets/images/finished-product-light.png)
 
 ## Deployed page
 
-[View Published Page](https://erin-m-keller.github.io/portfolio/)
+[View Published Page](https://erin-m-keller.github.io/keller-portfolio/)
 
 ## License
 
