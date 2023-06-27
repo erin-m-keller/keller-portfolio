@@ -1095,7 +1095,7 @@ form .resume-btn:hover {
 }
 .footer a {
     font-family: var(--font-sub-style);
-    font-size: 0.875rem;
+    font-size: 2em;
     font-weight: normal;
     color: #191919;
 }
@@ -1103,3 +1103,22 @@ form .resume-btn:hover {
     display:table-cell;
     vertical-align:middle;
 }
+.social-icons {
+    margin-top: 1.5em;
+}
+.social-icons a {
+    padding: 0 1em;
+}
+.dark.social-icons {
+    background-color: transparent;
+}
+.dark.social-icons svg path {
+    fill: #FFEB3B;
+}
+.light.social-icons {
+    background-color: transparent;
+}
+.light.social-icons svg path {
+    fill: #9C27B0;
+}
+

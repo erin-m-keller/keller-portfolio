@@ -5,6 +5,7 @@ import Resume from "./Resume";
 import Work from "./Work";
 import MobileMenu from "../components/MobileMenu";
 import DesktopMenu from "../components/DesktopMenu";
+import Footer from "../components/Footer";
 import { AnimatePresence } from "framer-motion";
 
 import {
@@ -73,21 +74,17 @@ function Main () {
             </header>
             {/* main content */}
             <main className="content" id="main">
-            <AnimatePresence mode="wait" initial={false}>
-                <Routes location={location}>
-                    <Route path="/portfolio" element={<AboutMe />} />
-                    <Route path="/work" element={<Work />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/resume" element={<Resume />} />
-                </Routes>
-            </AnimatePresence>
+                <AnimatePresence mode="wait" initial={false}>
+                    <Routes location={location}>
+                        <Route path="/portfolio" element={<AboutMe />} />
+                        <Route path="/work" element={<Work />} />
+                        <Route path="/contact" element={<Contact />} />
+                        <Route path="/resume" element={<Resume />} />
+                    </Routes>
+                </AnimatePresence>
             </main>
             {/* footer */}
-            <footer className="footer">
-                <div className="vertical-center">
-                    <h4>&copy; 2023 Erin Keller</h4>
-                </div>
-            </footer>
+            <Footer currentTheme={theme} />
         </div>
     );
 }
