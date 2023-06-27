@@ -43,68 +43,78 @@ class Resume extends Component {
                   <article className="objective">
                       <h4 className="resume-bold">Profile</h4>
                       <p className="sm">
-                        Technically proficient and committed developer who maintains cutting-edge skills and industry knowledge. Experience coding responsive websites 
-                        and web applications using HTML5, CSS, LESS, SASS, JavaScript, jQuery, ReactJS, Node.js, and MongoDB.
+                        Highly proficient and committed Full Stack Developer with a strong technical background and over a decade of front-end experience. 
+                        Known for consistently staying updated with cutting-edge skills and industry knowledge. Demonstrated expertise in coding responsive 
+                        websites and web applications, utilizing a wide range of technologies such as HTML5, CSS/LESS/SASS, JavaScript ES6, jQuery, JSON, 
+                        Node, MySQL, MongoDB, Sequelize, React, PWA, NoSQL, and MERN stack.
                       </p>
                   </article>
                   <article>
                     <div>
                       <h4 className="resume-bold">Employment History</h4>
-                      <p className="resume-bold">Learning Developer, IBM, Lansing<span>May 2013 - Present</span></p>
+                      <p className="resume-bold">Learning Developer, IBM, Lansing<span className="resume-date">May 2013 - Present</span></p>
                       <ul className="resume-list">
-                        <li className="sm">Works in an agile environment with weekly stand-ups, tracks issues in Jira, and conducts sprint planning and retrospectives every two weeks.</li>
+                        <li className="sm">Works in an agile environment with weekly stand-ups, tracks issues in Jira, and conducts sprint, planning and retrospectives every two weeks.</li>
                         <li className="sm">Rebuilt 5-year-old PHP application in React with full user experience redesign (Leadership Academy).</li>
                         <li className="sm">Refactored legacy HTML to meet industry standards and Accessibility compliance.</li>
-                        <li className="sm">Utilized HTML, CSS, and JavaScript to create 100+ responsive pages for leadership, management and executive development.</li>
+                        <li className="sm">Utilized HTML, CSS, and JavaScript to create 100+ responsive pages.</li>
                         <li className="sm">Produced and assisted in the deployment of 10+ various web applications for our HR clients.</li>
+                        <li className="sm">Developed responsive and user-friendly web interfaces using HTML, CSS, and JavaScript, ensuring cross-browser compatibility and accessibility standards.</li>
                       </ul>
                     </div>
                     <div>
-                      <p className="resume-bold">Student Programmer, Lansing Community College, Lansing<span>May 2012 - May 2013</span></p>
+                      <p className="resume-bold">Student Programmer, Lansing Community College, Lansing<span className="resume-date">May 2012 - May 2013</span></p>
                       <ul className="resume-list">
-                        <li className="sm">Analyzed business processes to develop customized solutions.</li>
-                        <li className="sm">Used PL/SQL queries to manage databases.</li>
-                        <li className="sm">Developed applications in Application Express.</li>
-                        <li className="sm">Installed new applications/versions.</li>
-                        <li className="sm">Assisted in code reviews.</li>
-                        <li className="sm">Worked in an agile environment.</li>
+                        <li className="sm">Collaborated with business stakeholders to analyze their requirements and identify opportunities for developing custom solutions that streamline and improve business processes.</li>
+                        <li className="sm">Leveraged PL/SQL queries to manage and manipulate data within databases, ensuring efficient data retrieval and maintaining data integrity.</li>
+                        <li className="sm">Developed applications using Application Express, a low-code development platform, to create user-friendly and functional interfaces for various projects.</li>
+                        <li className="sm">Assisted in the installation and configuration of new applications and versions, ensuring smooth deployment and seamless integration with existing systems.</li>
+                        <li className="sm">Participated in code reviews, providing feedback and suggestions to improve code quality, performance, and adherence to coding standards.</li>
                       </ul>
                     </div>
                     <div>
-                      <p className="resume-bold">Front-end Developer, Tripper's, Lansing<span>Sep 2010 - Sep 2011</span></p>
+                      <p className="resume-bold">Front-end Developer, Tripper's, Lansing<span className="resume-date">Sep 2010 - Sep 2011</span></p>
                       <ul className="resume-list">
-                        <li className="sm">Designed and developed the company website using accessible design standards.</li>
-                        <li className="sm">Developed and maintained an interactive menu on the site.</li>
-                        <li className="sm">Managed the web application for the manager, including handling patron correspondance.</li>
-                        <li className="sm">Experience with HTML, CSS, JavaScript and working with content management systems (CMS).</li>
+                        <li className="sm">Designed and developed the company's website, adhering to industry best practices and implementing accessible design standards to ensure an optimal user experience.</li>
+                        <li className="sm">Created and maintained an interactive menu on the website, employing modern front-end technologies to enhance usability and navigation for site visitors.</li>
+                        <li className="sm">Managed the web application utilized by the manager, efficiently handling patron correspondence and providing seamless communication between the business and its customers.</li>
+                        <li className="sm">Utilized expertise in HTML and CSS to craft visually appealing and responsive web interfaces, ensuring compatibility across multiple browsers and devices.</li>
+                        <li className="sm">Implemented and customized content management systems (CMS), empowering the company to easily update and manage website content without extensive technical knowledge.</li>
                       </ul>
                     </div>
                     <div>
-                      <p className="resume-bold">Shift Leader II, Speedway LLC, Lansing<span>Feb 2006 - Sep 2010</span></p>
+                      <p className="resume-bold">Shift Leader II, Speedway LLC, Lansing<span className="resume-date">Feb 2006 - Sep 2010</span></p>
                       <ul className="resume-list">
-                        <li className="sm">Provided leadership and direction for employees.</li>
-                        <li className="sm">Supervised daily tasks to drive productivity and efficiency.</li>
-                        <li className="sm">Implemented training processes for newly hired employees.</li>
-                        <li className="sm">Handled weekly inventory control to replenish stock and maintain costs.</li>
-                        <li className="sm">Upheld food safety standards at all time.</li>
+                        <li className="sm">Demonstrated strong leadership and provided clear direction to employees, fostering a motivated and productive work environment.</li>
+                        <li className="sm">Supervised daily tasks, optimizing workflow and driving efficiency to meet operational goals and deliver exceptional service.</li>
+                        <li className="sm">Developed and implemented comprehensive training processes for newly hired employees, ensuring a smooth onboarding experience and promoting consistent performance.</li>
+                        <li className="sm">Oversaw weekly inventory control, effectively managing stock levels to maintain cost control and minimize waste.</li>
+                        <li className="sm">Maintained strict adherence to food safety standards, consistently upholding high levels of cleanliness and sanitation to ensure a safe and healthy working environment.</li>
                       </ul>
                     </div>
                   </article>
                   <article>
                     <h4 className="resume-bold">Education</h4>
                     <div>
+                      <p className="resume-bold">Michigan State University, East Lansing</p>
+                      <p className="sm">Certificate of Completion: Fullstack Developer Bootcamp</p>
+                      <p className="sm">4.0 GPA</p>
+                    </div>
+                    <div>
                       <p className="resume-bold">Lansing Community College</p>
                       <p className="sm">Associate's Degree: Computer Programmer/Business Analyst</p>
+                      <p className="sm">Additional specialized courses in computer graphics, graphic design, traditional art (drawing/painting), networking, database management, and project management.</p>
                     </div>
                     <div>
                       <p className="resume-bold">Sault Area High School</p>
                       <p className="sm">Diploma</p>
-                      <p className="sm">Certification: Novell Networking</p>
+                      <p><strong>Activities and societies:</strong> Kiwanis Key Club, JV/Varsity Softball, Varsity Diving</p>
+                      <p className="sm">Studies focused in general education, art (including art history), and computer networking. Graduated with a certification in Novell Networking through the Career Center.</p>
                     </div>
                   </article>
                   <article>
                     <h4 className="resume-bold">Badges</h4>
-                    <p className="sm"><a href="https://www.credly.com/badges/e030c825-b054-4fcf-a055-33f25bfea5a3/linked_in_profile" target="_blank">Python for Data Science</a>, <a href="https://www.credly.com/badges/bde1d498-b46f-414a-8bcc-f8943d15c7a8?source=linked_in_profile" target="_blank">Data Science Foundations - Level 1</a>, <a href="https://www.credly.com/badges/5f6891fb-4ba4-41a6-afbe-b80f39218f3a?source=linked_in_profile" target="_blank">IBM Carbon Design Systems Developer Essentials - React</a>, <a href="https://www.credly.com/badges/c08b7c46-c03d-4e33-8849-930480d37792?source=linked_in_profile" target="_blank">IBM Virtual Collaborator</a>, <a href="https://www.credly.com/badges/953104f8-84ef-4d73-b2c0-4880e191278a/linked_in_profile" target="_blank">IBM Digital Learning Transformation</a>, <a href="https://www.credly.com/badges/452993ff-74d7-4569-8267-e0118c9c0f97/linked_in_profile" target="_blank">IBM Agile Explorer</a>, <a href="https://www.credly.com/badges/becc3448-2a5a-4bbd-8282-dee30de55b62/linked_in_profile" target="_blank">Cognitive Practitioner</a>, <a href="https://www.credly.com/badges/c448c084-95d6-4947-bb9a-99f857e6adde/linked_in_profile" target="_blank">Human Resources in a Cognitive Era - Essentials</a>, <a href="https://www.credly.com/badges/9f4cc05e-0e1a-42d9-a0ea-cbcc63571401/linked_in_profile" target="_blank">IBM Mentor</a>, <a href="https://www.credly.com/badges/ea25633c-9cac-4fa6-b711-bc2087b51244/linked_in_profile" target="_blank">IBM Cloud Essentials</a>, <a href="https://www.credly.com/badges/bef456a5-3b2b-4619-bf85-da3d12cf5ffc/linked_in_profile" target="_blank">IBM Design Thinking Practitioner</a>, <a href="https://www.credly.com/badges/223dc2c4-4ba8-4868-a22b-4932c735a52c?source=linked_in_profile" target="_blank">IBM Growth Behaviors</a></p>
+                    <p className="sm"><a href="https://www.credly.com/badges/09e073a0-e7c4-4b20-ab6d-f387bbd9cadf" target="_blank">Be Equal Ally</a>, <a href="https://www.credly.com/badges/62d9ba2b-8e15-4b69-a1d8-e3960e4beee8" target="_blank">Advancing Accessibility</a>, <a href="https://www.credly.com/badges/e030c825-b054-4fcf-a055-33f25bfea5a3/linked_in_profile" target="_blank">Python for Data Science</a>, <a href="https://www.credly.com/badges/bde1d498-b46f-414a-8bcc-f8943d15c7a8?source=linked_in_profile" target="_blank">Data Science Foundations - Level 1</a>, <a href="https://www.credly.com/badges/5f6891fb-4ba4-41a6-afbe-b80f39218f3a?source=linked_in_profile" target="_blank">IBM Carbon Design Systems Developer Essentials - React</a>, <a href="https://www.credly.com/badges/c08b7c46-c03d-4e33-8849-930480d37792?source=linked_in_profile" target="_blank">IBM Virtual Collaborator</a>, <a href="https://www.credly.com/badges/953104f8-84ef-4d73-b2c0-4880e191278a/linked_in_profile" target="_blank">IBM Digital Learning Transformation</a>, <a href="https://www.credly.com/badges/452993ff-74d7-4569-8267-e0118c9c0f97/linked_in_profile" target="_blank">IBM Agile Explorer</a>, <a href="https://www.credly.com/badges/becc3448-2a5a-4bbd-8282-dee30de55b62/linked_in_profile" target="_blank">Cognitive Practitioner</a>, <a href="https://www.credly.com/badges/c448c084-95d6-4947-bb9a-99f857e6adde/linked_in_profile" target="_blank">Human Resources in a Cognitive Era - Essentials</a>, <a href="https://www.credly.com/badges/9f4cc05e-0e1a-42d9-a0ea-cbcc63571401/linked_in_profile" target="_blank">IBM Mentor</a>, <a href="https://www.credly.com/badges/ea25633c-9cac-4fa6-b711-bc2087b51244/linked_in_profile" target="_blank">IBM Cloud Essentials</a>, <a href="https://www.credly.com/badges/bef456a5-3b2b-4619-bf85-da3d12cf5ffc/linked_in_profile" target="_blank">IBM Design Thinking Practitioner</a>, <a href="https://www.credly.com/badges/223dc2c4-4ba8-4868-a22b-4932c735a52c?source=linked_in_profile" target="_blank">IBM Growth Behaviors</a></p>
                   </article>
                 </div>
                 <div className="sidebar">
@@ -130,29 +140,28 @@ class Resume extends Component {
                     <p className="sm">Bootstrap</p>
                     <p className="sm">Bulma CSS</p>
                     <p className="sm">Tailwind CSS</p>
-                    <p className="sm">JavaScript</p>
+                    <p className="sm">JavaScript ES6</p>
                     <p className="sm">jQuery</p>
-                    <p className="sm">React JS</p>
-                    <p className="sm">Node.js</p>
+                    <p className="sm">JSON</p>
+                    <p className="sm">Ajax</p>
+                    <p className="sm">Object-oriented Programming</p>
+                    <p className="sm">Node</p>
+                    <p className="sm">Express</p>
                     <p className="sm">MySQL</p>
+                    <p className="sm">MVC Paradigm</p>
                     <p className="sm">MongoDB</p>
+                    <p className="sm">Mongoose</p>
+                    <p className="sm">Sequelize</p>
+                    <p className="sm">Testing</p>
+                    <p className="sm">Agile Development</p>
+                    <p className="sm">React</p>
+                    <p className="sm">Progressive Web Apps</p>
+                    <p className="sm">NoSQL</p>
                     <p className="sm">Git</p>
-                    <p className="sm">Microsoft Office Suite</p>
-                    <p className="sm">Adobe Suite</p>
-                    <p className="sm">Interpersonal Skills</p>
-                    <p className="sm">Creativity</p>
-                    <p className="sm">Problem Solving</p>
-                    <p className="sm">Decision Making</p>
+                    <p className="sm">MERN Stack</p>
                     <p className="sm">Computer Skills</p>
-                    <p className="sm">Effective Time Management</p>
-                    <p className="sm">Ability to Multitask</p>
+                    <p className="sm">Computer Science Fundamentals</p>
                     <p className="sm">Growth Minded</p>
-                    <p className="sm">Fast Learner</p>
-                    <p className="sm">Adaptability</p>
-                    <p className="sm">Customer Service</p>
-                    <p className="sm">Ability to Work Under Pressure</p>
-                    <p className="sm">Ability to Work in a Team</p>
-                    <p className="sm">Communication Skills</p>
                   </article>
                   <article>
                     <p className="resume-bold">Hobbies</p>
