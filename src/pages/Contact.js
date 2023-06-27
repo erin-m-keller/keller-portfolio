@@ -59,6 +59,11 @@ class Contact extends Component {
       enter: { opacity: 1, y: 0 },
       exit: { opacity: 0, y: 60 },
     };
+    const formAnimation = {
+      initial: { opacity: 0, x: 200 },
+      enter: { opacity: 1, x: 0 },
+      exit: { opacity: 0, x: 200 },
+    };
     return (
       <motion.section
         initial="initial"
@@ -71,7 +76,9 @@ class Contact extends Component {
         <div className="main-content">
           <motion.div variants={childElem} transition={{ duration: 0.5 }} className="contact-me container">
             <h1 className="header-title">Contact <span className="emphasis">me</span>. <FontAwesomeIcon icon={faAddressCard} /></h1>
-            <ContactForm />
+            <motion.div variants={formAnimation} transition={{ duration: 1.5 }}>
+              <ContactForm />
+            </motion.div>
           </motion.div>
         </div>
       </motion.section>
