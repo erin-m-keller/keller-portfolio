@@ -3,6 +3,27 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFire } from '@fortawesome/free-solid-svg-icons';
 import resume from "../assets/documents/erin-resume.pdf";
+import html5 from "../assets/images/skills/html5.png";
+import css3 from "../assets/images/skills/css3.png";
+import less from "../assets/images/skills/less.png";
+import sass from "../assets/images/skills/sass.png";
+import bootstrap from "../assets/images/skills/bootstrap.png";
+import bulma from "../assets/images/skills/bulma.svg";
+import tailwind from "../assets/images/skills/tailwind.png";
+import javascript from "../assets/images/skills/javascript.svg";
+import jquery from "../assets/images/skills/jquery.png";
+import json from "../assets/images/skills/json.png";
+import ajax from "../assets/images/skills/ajax.png";
+import node from "../assets/images/skills/node.png";
+import express from "../assets/images/skills/express.svg";
+import mysql from "../assets/images/skills/mysql.svg";
+import mongodb from "../assets/images/skills/mongodb.png";
+import mongoose from "../assets/images/skills/mongoose.svg";
+import sequelize from "../assets/images/skills/sequelize.svg";
+import react from "../assets/images/skills/react.png";
+import pwa from "../assets/images/skills/pwa.svg";
+import github from "../assets/images/skills/github.svg";
+import mern from "../assets/images/skills/mern.svg";
  
 class Resume extends Component {
   render() {
@@ -33,6 +54,138 @@ class Resume extends Component {
         <div className="main-content">
           <motion.div variants={childElem} transition={{ duration: 0.5 }} className="resume container">
             <h1 className="header-title">My <span className="emphasis">resume</span>. <FontAwesomeIcon icon={faFire} /></h1>
+            <motion.div className="resume-skills" variants={resumeElem} transition={{ duration: 1.5 }}>
+              <span className="skill-title">Front End &lt;Skills&#47;&gt;</span>
+              <div className="img-border">
+                <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank">
+                  <img src={html5} style={{top:"15px"}} alt="HTML 5" />
+                  <div className="img-desc"><p>HTML5</p></div>
+                </a>
+              </div>
+              <div className="img-border">
+                <a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS" target="_blank">
+                  <img src={css3} style={{width:"3em",top:"15px"}} alt="CSS3" />
+                  <div className="img-desc"><p>CSS3</p></div>
+                </a>
+              </div>
+              <div className="img-border">
+                <a href="https://lesscss.org/" target="_blank">
+                  <img src={less} style={{top:"29px"}} alt="LESS" />
+                  <div className="img-desc"><p>LESS</p></div>
+                </a>
+              </div>
+              <div className="img-border">
+                <a href="https://sass-lang.com/" target="_blank">
+                  <img src={sass} style={{top:"18px"}} alt="Sass" />
+                  <div className="img-desc"><p>Sass</p></div>
+                </a>
+              </div>
+              <div className="img-border">
+                <a href="https://getbootstrap.com/" target="_blank">
+                  <img src={bootstrap} style={{top:"19px"}} alt="Bootstrap" />
+                  <div className="img-desc"><p>Bootstrap</p></div>
+                </a>
+              </div>
+              <div className="img-border">
+                <a href="https://bulma.io/" target="_blank">
+                  <img src={bulma} style={{width:"5em",top:"31px"}} alt="Bulma" />
+                  <div className="img-desc"><p>Bulma</p></div>
+                </a>
+              </div>
+              <div className="img-border">
+                <a href="https://tailwindcss.com/" target="_blank">
+                  <img src={tailwind} style={{top:"12px"}} alt="Tailwind" />
+                  <div className="img-desc"><p>Tailwind</p></div>
+                </a>
+              </div>
+              <div className="img-border">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+                  <img src={javascript} style={{width:"3em",top:"19px"}} alt="JavaScript" />
+                  <div className="img-desc"><p>JS</p></div>
+                </a>
+              </div>
+              <div className="img-border">
+                <a href="https://jquery.com/" target="_blank">
+                  <img src={jquery} style={{width:"5.25em",top:"31px"}} alt="jQuery" />
+                  <div className="img-desc"><p>jQuery</p></div>
+                </a>
+              </div>
+              <div className="img-border">
+                <a href="https://www.json.org/json-en.html" target="_blank">
+                  <img src={json} style={{top:"14px"}} alt="JSON" />
+                  <div className="img-desc"><p>JSON</p></div>
+                </a>
+              </div>
+              <div className="img-border">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX" target="_blank">
+                  <img src={ajax} style={{width:"5.25em",top:"17px"}} alt="Ajax" />
+                  <div className="img-desc"><p>Ajax</p></div>
+                </a>
+              </div>
+              <div className="img-border">
+                <a href="https://github.com/" target="_blank">
+                  <img src={github} style={{width:"3.25em",top:"17px"}} alt="GitHub" />
+                  <div className="img-desc"><p>GitHub</p></div>
+                </a>
+              </div>
+            </motion.div>
+            <motion.div className="resume-skills" variants={resumeElem} transition={{ duration: 1.5 }}>
+              <span className="skill-title">Back End &lt;Skills&#47;&gt;</span>
+              <div className="img-border">
+                <a href="https://nodejs.org/en/docs" target="_blank">
+                  <img src={node} style={{width:"5em",top:"22px"}} alt="Node" />
+                  <div className="img-desc"><p>Node</p></div>
+                </a>
+              </div>
+              <div className="img-border">
+                <a href="https://expressjs.com/" target="_blank">
+                  <img src={express} style={{width:"5em",top:"25px"}} alt="Express" />
+                  <div className="img-desc"><p>Express</p></div>
+                </a>
+              </div>
+              <div className="img-border">
+                <a href="https://dev.mysql.com/doc/" target="_blank">
+                  <img src={mysql} style={{width:"6em",top:"14px"}} alt="MySQL" />
+                  <div className="img-desc"><p>MySQL</p></div>
+                </a>
+              </div>
+              <div className="img-border">
+                <a href="https://www.mongodb.com/docs/" target="_blank">
+                  <img src={mongodb} style={{width:"5.5em",top:"29px"}} alt="MongoDB" />
+                  <div className="img-desc"><p>MongoDB</p></div>
+                </a>
+              </div>
+              <div className="img-border">
+                <a href="https://mongoosejs.com/docs/" target="_blank">
+                  <img src={mongoose} style={{width:"3.5em",top:"14px"}} alt="Mongoose" />
+                  <div className="img-desc"><p>Mongoose</p></div>
+                </a>
+              </div>
+              <div className="img-border">
+                <a href="https://sequelize.org/" target="_blank">
+                  <img src={sequelize} style={{width:"3.5em",top:"14px"}} alt="Sequelize" />
+                  <div className="img-desc"><p>Sequelize</p></div>
+                </a>
+              </div>
+              <div className="img-border">
+                <a href="https://react.dev/" target="_blank">
+                  <img src={react} style={{width:"4em",top:"16px"}} alt="React" />
+                  <div className="img-desc"><p>React</p></div>
+                </a>
+              </div>
+              <div className="img-border">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps" target="_blank">
+                  <img src={pwa} style={{width:"4.5em",top:"28px"}} alt="Progressive Web Apps" />
+                  <div className="img-desc"><p>PWA</p></div>
+                </a>
+              </div>
+              <div className="img-border">
+                <a href="https://outweb.io/documentation.html" target="_blank">
+                  <img src={mern} style={{width:"4.5em",top:"10px"}} alt="MERN" />
+                  <div className="img-desc"><p>MERN</p></div>
+                </a>
+              </div>
+            </motion.div>
             <motion.div className="resume-form" variants={resumeElem} transition={{ duration: 1.5 }}>
               <div className="main">
                 <div className="edu-exp">
