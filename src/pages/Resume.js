@@ -64,7 +64,7 @@ class Resume extends Component {
               </div>
               <div className="img-border">
                 <a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS" target="_blank">
-                  <img src={css3} style={{width:"3em",top:"15px"}} alt="CSS3" />
+                  <img src={css3} style={{width:"3em",top:"13px"}} alt="CSS3" />
                   <div className="img-desc"><p>CSS3</p></div>
                 </a>
               </div>

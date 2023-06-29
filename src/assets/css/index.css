@@ -683,9 +683,9 @@ p.personal-txt {
     border: 5px solid #000;
 }
 .light .card-list article {
-    background-color: var(--lightbg-highlight-color);
-    color: #191919;
-    border: 5px solid var(--lightbg-highlight-color);
+    background-color: #9c27b0;
+    color: #FFF;
+    border: 5px solid #9c27b0;
 }
 .card-list { 
     display: flex;
@@ -722,7 +722,7 @@ p.personal-txt {
 }
 .light .content-txt p,
 .light .content-txt h3 {
-    color: #191919;
+    color: #FFF;
 }
 .content-txt p,
 .content-txt h3 {
