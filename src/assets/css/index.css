@@ -738,12 +738,12 @@ p.personal-txt {
     background-color: #f4e770;
 }
 .light .content-txt .card-btn {
-    color: #FFF;
-    background-color: #9C27B0;
+    color: #191919;
+    background-color: #aff4e6;
 }
 .light .content-txt .card-btn:hover {
-    color: #FFF;
-    background-color: #c36ad2;
+    color: #191919;
+    background-color: #90e3d2;
 }
 .content-txt .card-btn {
     font-family: var(--font-main-style);
