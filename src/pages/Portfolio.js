@@ -26,6 +26,7 @@ import pwaScreenshot from "../assets/images/pwa-screenshot.png";
 import socialScreenshot from "../assets/images/social-api.png";
 import ecommerceScreenshot from "../assets/images/ecommerce-screenshot.png";
 import bookSearch from "../assets/images/book-search.png";
+import reduxStore from "../assets/images/redux-store.png";
 
 class Portfolio extends Component {
   render() {
@@ -76,6 +77,14 @@ class Portfolio extends Component {
                         </div>
                         <h1 className="header-title">Personal <span className="emphasis">web projects</span>. <FontAwesomeIcon icon={faPerson} /></h1>
                         <div className="card-list" style={{marginBottom:"2em"}}>
+                              <motion.article variants={cardElem} transition={{ duration: 1.5 }}>
+                                    <Card cardUrl="https://keller-redux-6960698a5b38.herokuapp.com/"
+                                          btnUrl="https://github.com/erin-m-keller/keller-redux"
+                                          src={reduxStore}
+                                          alt="Shop/Shop Store"
+                                          title="Shop/Shop Store"
+                                          tags={["#html5","#css","#javascript","#nodeJS","#expressJS","#mongoDB","#mongoose","#react","#redux","#graphQL","#apollo"]} />
+                              </motion.article>
                               <motion.article variants={cardElem} transition={{ duration: 1.5 }}>
                                     <Card cardUrl="https://keller-book-search-f22cfc8fab39.herokuapp.com/"
                                           btnUrl="https://github.com/erin-m-keller/keller-book-search"
