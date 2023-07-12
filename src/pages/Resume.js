@@ -123,6 +123,12 @@ class Resume extends Component {
                 </a>
               </div>
               <div className="img-border">
+                <a href="https://react.dev/" target="_blank">
+                  <img src={react} style={{width:"4em",top:"16px"}} alt="React" />
+                  <div className="img-desc"><p>React</p></div>
+                </a>
+              </div>
+              <div className="img-border">
                 <a href="https://github.com/" target="_blank">
                   <img src={github} style={{width:"3.25em",top:"17px"}} alt="GitHub" />
                   <div className="img-desc"><p>GitHub</p></div>
@@ -165,12 +171,6 @@ class Resume extends Component {
                 <a href="https://sequelize.org/" target="_blank">
                   <img src={sequelize} style={{width:"3.5em",top:"14px"}} alt="Sequelize" />
                   <div className="img-desc"><p>Sequelize</p></div>
-                </a>
-              </div>
-              <div className="img-border">
-                <a href="https://react.dev/" target="_blank">
-                  <img src={react} style={{width:"4em",top:"16px"}} alt="React" />
-                  <div className="img-desc"><p>React</p></div>
                 </a>
               </div>
               <div className="img-border">

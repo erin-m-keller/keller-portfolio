@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/keller-portfolio/static/css/main.48671571.css",
-    "main.js": "/keller-portfolio/static/js/main.9c5a5415.js",
+    "main.js": "/keller-portfolio/static/js/main.9d444be4.js",
     "static/media/note-taker-screenshot.png": "/keller-portfolio/static/media/note-taker-screenshot.8a41670c7da46a69dd09.png",
     "static/media/redux-store.png": "/keller-portfolio/static/media/redux-store.62af0224c3ce0619855a.png",
     "static/media/quiz-screenshot.png": "/keller-portfolio/static/media/quiz-screenshot.8e891c63333452707566.png",
@@ -62,10 +62,10 @@
     "static/media/github.svg": "/keller-portfolio/static/media/github.6fa18895f6e6c7772cab7049f7e05f59.svg",
     "static/media/pwa.svg": "/keller-portfolio/static/media/pwa.4bc40c07cd9797b1cc379c27ef9fb7a8.svg",
     "main.48671571.css.map": "/keller-portfolio/static/css/main.48671571.css.map",
-    "main.9c5a5415.js.map": "/keller-portfolio/static/js/main.9c5a5415.js.map"
+    "main.9d444be4.js.map": "/keller-portfolio/static/js/main.9d444be4.js.map"
   },
   "entrypoints": [
     "static/css/main.48671571.css",
-    "static/js/main.9c5a5415.js"
+    "static/js/main.9d444be4.js"
   ]
 }

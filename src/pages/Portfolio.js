@@ -134,14 +134,6 @@ class Portfolio extends Component {
                                           tags={["#html","#css","#jquery","#day.js"]} />
                               </motion.article>
                               <motion.article variants={cardElem} transition={{ duration: 1.5 }}>
-                                    <Card cardUrl="https://erin-m-keller.github.io/keller-quiz/"
-                                          btnUrl="https://github.com/erin-m-keller/keller-quiz"
-                                          src={quizScreenshot}
-                                          alt="Coding Quiz"
-                                          title="Coding Quiz"
-                                          tags={["#html","#css","#bootstrap","#javascript"]} />
-                              </motion.article>
-                              <motion.article variants={cardElem} transition={{ duration: 1.5 }}>
                                     <Card cardUrl="https://erin-m-keller.github.io/keller-password/"
                                           btnUrl="https://github.com/erin-m-keller/keller-password"
                                           src={pwdScreenshot}
@@ -204,6 +196,14 @@ class Portfolio extends Component {
                                           alt="LastFM Music Artist Search Engine"
                                           title="LastFM Music Artist Search Engine"
                                           tags={["#html","#css","#bulma-css","#javascript","#react","#lastfm api"]} />
+                              </motion.article>
+                              <motion.article variants={cardElem} transition={{ duration: 1.5 }}>
+                                    <Card cardUrl="https://erin-m-keller.github.io/keller-quiz/"
+                                          btnUrl="https://github.com/erin-m-keller/keller-quiz"
+                                          src={quizScreenshot}
+                                          alt="Coding Quiz"
+                                          title="Coding Quiz"
+                                          tags={["#html","#css","#bootstrap","#javascript"]} />
                               </motion.article>
                         </div>
                         <h1 className="header-title">Terminal <span className="emphasis">applications</span>. <FontAwesomeIcon icon={faTerminal} /></h1>
