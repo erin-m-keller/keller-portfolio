@@ -27,6 +27,7 @@ import socialScreenshot from "../assets/images/social-api.png";
 import ecommerceScreenshot from "../assets/images/ecommerce-screenshot.png";
 import bookSearch from "../assets/images/book-search.png";
 import reduxStore from "../assets/images/redux-store.png";
+import hitchedAndGlitched from "../assets/images/hitched-and-glitched.png";
 
 class Portfolio extends Component {
   render() {
@@ -65,6 +66,14 @@ class Portfolio extends Component {
                                           alt="Meta-Insight"
                                           title="Meta-Insight"
                                           tags={["#html","#css","#ionic","#javascript","#mysql","express","#jawsdb","#handlebars"]} />
+                              </motion.article>
+                              <motion.article variants={cardElem} transition={{ duration: 1.5 }}>
+                                    <Card cardUrl="https://hitched-and-glitched-697b7a3de50f.herokuapp.com/"
+                                          btnUrl="https://github.com/erin-m-keller/hitched-and-glitched"
+                                          src={hitchedAndGlitched}
+                                          alt="Hitched & Glitched"
+                                          title="Hitched & Glitched"
+                                          tags={["#html","#css","#javascript","#express","#node","react","#mongodb","#antdesign","#graphql","#apollo","#pwa"]} />
                               </motion.article>
                               <motion.article variants={cardElem} transition={{ duration: 1.5 }}>
                                     <Card cardUrl="https://erin-m-keller.github.io/volunteer-finder/"
